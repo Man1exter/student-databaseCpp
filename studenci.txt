@@ -1,0 +1,5 @@
+cd "c:\Users\mperz\Desktop\Lista 0 0 0
+zad.7\" ; 1875255240 6421294 0
+if ($?) 17563648 1875938528 0
+{ g++ 1876005776 0 0
+bazastudentow.cpp -o 6421704 6421704 0
