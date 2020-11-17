@@ -20,9 +20,9 @@ fstream plik;
 
 plik.open( "studenci.txt", ios::out | ios::app);
 
-Osoba uczniowie[5];
+Osoba uczniowie[20];
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < 20; i++){
     cout << "podaj imie i nazwisko " << i+1 << " ucznia: " ;
     cin >> uczniowie[i].imie;
     cin >> uczniowie[i].nazwisko;
@@ -30,28 +30,28 @@ for(int i = 0; i < 5; i++){
 
 cout << endl;
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < 20; i++){
     cout << "podaj numer albumu " << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ";
     cin >> uczniowie[i].nrAlbumu;
 }
 
 cout << endl;
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < 20; i++){
     cout << "podaj wiek " << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ";
     cin >> uczniowie[i].wiek;
 }
 
 cout << endl;
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < 20; i++){
     cout << "podaj srednia ocen: " << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ";
     cin >> uczniowie[i].srOcen;
 }
 
 cout << endl;
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < 20; i++){
 plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen << endl;
 } 
 
