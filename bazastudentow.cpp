@@ -2,6 +2,7 @@
 #include <string>
 #include <stdio.h>
 #include <fstream>
+#include <conio.h>
 
 using namespace std;
 
