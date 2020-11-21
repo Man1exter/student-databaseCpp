@@ -85,6 +85,12 @@ int liczba;
     return 0;
 }
 
+//#define KEY_L - alfabetyczny porzadek
+//#define KEY_K - zapis studentow i pliku
+//#define KEY_U - usuniecie studenta z 2.5 srocen
+//#define KEY_D - dodanie nowego studenta(im,nazw,wiek,sro,nralb)
+//#define KEY_X - wyjscie
+
 //<L> wylistowanie nazwisk, imion i wieku wszystkich studentów ​w porządku alfabetycznym oraz zamiana wszystkich liter na duże;
 
 //<D> dodanie nowego studenta (ale nie więcej niż 20) oraz wprowadzenie wszystkich cech go
