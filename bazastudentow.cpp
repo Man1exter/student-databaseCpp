@@ -84,7 +84,28 @@ if(plik.is_open())
 char key = getch();
 int value = key;
 
+while(value != KEY_X){
+    switch(getch()){
 
+        case KEY_L: cout<<endl;
+        break;
+
+        case KEY_D: cout<<endl;
+        break;
+
+        case KEY_U: cout<<endl;
+        break;
+
+        case KEY_K: cout<<endl;
+        break;
+        
+        default:
+        exit(1);
+    }
+}
+
+key = getch();
+value = key;
 
     return 0;
 }
