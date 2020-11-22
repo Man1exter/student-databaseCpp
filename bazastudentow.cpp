@@ -6,11 +6,11 @@
 
 using namespace std;
 
-#define KEY_L //- alfabetyczny porzadek
-#define KEY_K //- zapis studentow i pliku
-#define KEY_U //- usuniecie studenta z 2.5 srocen
-#define KEY_D //- dodanie nowego studenta(im,nazw,wiek,sro,nralb)
-#define KEY_X //- wyjscie
+#define KEY_L 76 //- alfabetyczny porzadek
+#define KEY_K 75 //- zapis studentow i pliku
+#define KEY_U 85 //- usuniecie studenta z 2.5 srocen
+#define KEY_D 68 //- dodanie nowego studenta(im,nazw,wiek,sro,nralb)
+#define KEY_X 88 //- wyjscie
 
 struct Osoba{
 
@@ -87,16 +87,16 @@ int value = key;
 while(value != KEY_X){
     switch(getch()){
 
-        case KEY_L: cout<<endl;
+        case KEY_L : cout<<endl;
         break;
 
-        case KEY_D: cout<<endl;
+        case KEY_D : cout<<endl;
         break;
 
-        case KEY_U: cout<<endl;
+        case KEY_U : cout<<endl;
         break;
 
-        case KEY_K: cout<<endl;
+        case KEY_K : cout<<endl;
         break;
         
         default:
@@ -110,13 +110,6 @@ value = key;
     return 0;
 }
 
-//while(value != KEY_X)
-// switch(getch())
-// case KEY_X:
-//break;
-// case KEY-L:
-//key = getch();
-//value = key;
 
 //<L> wylistowanie nazwisk, imion i wieku wszystkich studentów ​w porządku alfabetycznym oraz zamiana wszystkich liter na duże;
 
