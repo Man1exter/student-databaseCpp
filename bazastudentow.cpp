@@ -75,13 +75,6 @@ if(plik.is_open())
 	}
 
 
-int liczba;
-
-
-
-
-
-
     return 0;
 }
 
@@ -90,6 +83,17 @@ int liczba;
 //#define KEY_U - usuniecie studenta z 2.5 srocen
 //#define KEY_D - dodanie nowego studenta(im,nazw,wiek,sro,nralb)
 //#define KEY_X - wyjscie
+
+// char key = getch();
+// iny value = key;
+
+//while(value != KEY_X)
+// switch(getch())
+// case KEY_X:
+//break;
+// case KEY-L:
+//key = getch();
+//value = key;
 
 //<L> wylistowanie nazwisk, imion i wieku wszystkich studentów ​w porządku alfabetycznym oraz zamiana wszystkich liter na duże;
 
