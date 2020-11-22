@@ -81,17 +81,13 @@ if(plik.is_open())
 	}
 
 
+char key = getch();
+int value = key;
+
+
+
     return 0;
 }
-
-//#define KEY_L - alfabetyczny porzadek
-//#define KEY_K - zapis studentow i pliku
-//#define KEY_U - usuniecie studenta z 2.5 srocen
-//#define KEY_D - dodanie nowego studenta(im,nazw,wiek,sro,nralb)
-//#define KEY_X - wyjscie
-
-// char key = getch();
-// iny value = key;
 
 //while(value != KEY_X)
 // switch(getch())
