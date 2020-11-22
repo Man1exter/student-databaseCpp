@@ -6,6 +6,12 @@
 
 using namespace std;
 
+#define KEY_L //- alfabetyczny porzadek
+#define KEY_K //- zapis studentow i pliku
+#define KEY_U //- usuniecie studenta z 2.5 srocen
+#define KEY_D //- dodanie nowego studenta(im,nazw,wiek,sro,nralb)
+#define KEY_X //- wyjscie
+
 struct Osoba{
 
     string imie;
