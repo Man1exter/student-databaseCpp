@@ -87,16 +87,28 @@ int value = key;
 while(value != KEY_X){
     switch(getch()){
 
-        case KEY_L : cout<<endl;
+        case KEY_L : 
+
+        cout<<endl;
+        
         break;
 
-        case KEY_D : cout<<endl;
+        case KEY_D : 
+
+        cout<<endl;
+
         break;
 
-        case KEY_U : cout<<endl;
+        case KEY_U : 
+
+        cout<<endl;
+
         break;
 
-        case KEY_K : cout<<endl;
+        case KEY_K : 
+
+        cout<<endl;
+
         break;
         
         default:
