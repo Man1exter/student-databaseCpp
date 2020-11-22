@@ -132,15 +132,6 @@ value = key;
 }
 
 
-//<L> wylistowanie nazwisk, imion i wieku wszystkich studentów ​w porządku alfabetycznym oraz zamiana wszystkich liter na duże;
-
-//<D> dodanie nowego studenta (ale nie więcej niż 20) oraz wprowadzenie wszystkich cech go
-//opisujących; sprawdzone zostanie czy imię studenta znajduje się na predefiniowanej liście dopuszczalnych imion (zbiór ze słownikiem imion jako stała);
-
-//<U> usunięcie studenta ze średnią ocen poniżej 2.5;
-
-//<K> zakończenie programu i zapisanie bazy studentów do pliku.
-
 
 
 
