@@ -80,6 +80,15 @@ if(plik.is_open())
         cout << endl;
 	}
 
+cout << "         MENU LISTY UCZNIOW:       " << endl;
+cout << "------------------------------" << endl;
+cout << "K - Zapis aktualnego stanu.." << endl;
+cout << "L - Listowanie Listy alfabetycznie.." << endl;
+cout << "U - Usuniecie studenta ze sr.ocen 2.5" << endl;
+cout << "D - Dodanie nowego studenta i jego cech(imie,nazwisko,wiek,srOcen,nrAlbumu)" << endl;
+cout << "X - Wyjscie z programu" << endl;
+
+
 
 char key = getch();
 int value = key;
@@ -90,7 +99,7 @@ while(value != KEY_X){
         case KEY_L : 
 
         cout<<endl;
-        
+
         break;
 
         case KEY_D : 
