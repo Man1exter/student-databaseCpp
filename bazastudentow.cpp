@@ -97,31 +97,31 @@ int value = key;
 while(value != KEY_X){
     switch(getch()){
 
-        case KEY_L : 
+        case KEY_L : //listowanie
 
         cout<<endl;
 
         break;
 
-        case KEY_D : 
+        case KEY_D : //dodawanie
 
         cout<<endl;
 
         break;
 
-        case KEY_U : 
+        case KEY_U : //usuniecie
 
         cout<<endl;
 
         break;
 
-        case KEY_K : 
+        case KEY_K : //zapis
 
         cout<<endl;
 
         break;
         
-        default:
+        default: //wyjscie
         exit(1);
     }
 }
