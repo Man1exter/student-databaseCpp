@@ -72,29 +72,28 @@ cout << "..(U).. - Usuniecie studenta ze sr.ocen 2.5.." << endl;
 cout << "..(D).. - Dodanie nowego studenta i jego cech(imie,nazwisko,wiek,srOcen,nrAlbumu) nie wiecej niz 20 uczniow.." << endl;
 cout << "..(X).. - Wyjscie z programu.." << endl;
 cout << "------------------------------------------" << endl;
+cout << endl;
+
 
 char key = getch();
 int value = key;
+
+cin >> value;
 
 while(value != KEY_X){
     switch(getch()){
         case KEY_L : //listowanie
 
     for(int i; i < sizeof(uczniowie)/sizeof(uczniowie[i]); i++){
-   
-    //  sort(uczniowie, uczniowie + 5);
-    //  for(auto ele: uczniowie){
-    //      cout << ele << ", " << endl;
-    //  }
         
+    }
         cout << "Nazwiska zostały wylistowane!" << endl;
 
         for(int i = 0; i < 5; i++){
         plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen << endl;
         } 
         break;
-    }
-
+    
 
         case KEY_D : //dodawanie
 
