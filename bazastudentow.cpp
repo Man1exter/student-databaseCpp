@@ -101,6 +101,13 @@ while(value != KEY_X){
 
         case KEY_L : //listowanie
 
+        plik.open( "studenci.txt", ios::out | ios::app);
+
+
+
+
+        plik.close();
+
         plik.open( "studenci.txt", ios::in );
 
 
@@ -117,13 +124,6 @@ while(value != KEY_X){
 
 	}
         
-        // for(int i = 0; i < sizeof(uczniowie)/sizeof(uczniowie[0]); i++){
-        // cout << uczniowie[i] << ", ";
-        // }
-        // sort(uczniowie,uczniowie+20);
-        // for(auto ele: uczniowie){
-        //     cout << ele << ", ";
-        // }
 
         cout << "Nazwiska zostały wylistowane!" << endl;
 
