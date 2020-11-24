@@ -74,7 +74,6 @@ cout << "..(X).. - Wyjscie z programu.." << endl;
 cout << "------------------------------------------" << endl;
 cout << endl;
 
-
 char key = getch();
 int value = key;
 
@@ -83,16 +82,13 @@ cin >> value;
 
 while(value != KEY_X){
     switch(getch()){
-        case KEY_L : //listowanie
+        case KEY_L : //listowanie + duza litera pierwsza
 
     for(int i; i < sizeof(uczniowie)/sizeof(uczniowie[i]); i++){
         
     }
         cout << "Nazwiska zostały wylistowane!" << endl;
 
-        for(int i = 0; i < 5; i++){
-        plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen << endl;
-        } 
         break;
     
 
