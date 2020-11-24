@@ -78,12 +78,11 @@ cout << "..(U).. - Usuniecie studenta ze sr.ocen 2.5.." << endl;
 cout << "..(D).. - Dodanie nowego studenta i jego cech(imie,nazwisko,wiek,srOcen,nrAlbumu) nie wiecej niz 20 uczniow.." << endl;
 cout << "..(X).. - Wyjscie z programu.." << endl;
 cout << "------------------------------------------" << endl;
+cout << "Podaj znak(w ramce) do wywołania danej metody na liscie studentow/uczniow.."
 
 char key = getch();
 int value = key;
 
-// cout << "Podaj znak z menu (zaznaczony w ramce)" << endl;
-// cin >> value;
 
 while(value != KEY_X){
     switch(getch()){
