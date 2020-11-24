@@ -72,7 +72,6 @@ cout << "..(U).. - Usuniecie studenta ze sr.ocen 2.5.." << endl;
 cout << "..(D).. - Dodanie nowego studenta i jego cech(imie,nazwisko,wiek,srOcen,nrAlbumu) nie wiecej niz 20 uczniow.." << endl;
 cout << "..(X).. - Wyjscie z programu.." << endl;
 cout << "------------------------------------------" << endl;
-cout << endl;
 
 char key = getch();
 int value = key;
@@ -84,9 +83,6 @@ while(value != KEY_X){
     switch(getch()){
         case KEY_L : //listowanie + duza litera pierwsza
 
-    for(int i; i < sizeof(uczniowie)/sizeof(uczniowie[i]); i++){
-        
-    }
         cout << "Nazwiska zostały wylistowane!" << endl;
 
         break;
