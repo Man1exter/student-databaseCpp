@@ -78,6 +78,7 @@ cout << endl;
 char key = getch();
 int value = key;
 
+cout << "Podaj znak z menu (zaznaczony w ramce)" << endl;
 cin >> value;
 
 while(value != KEY_X){
