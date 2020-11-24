@@ -65,6 +65,15 @@ plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wie
 } 
 
 
+cout << "          MENU LISTY UCZNIOW:       " << endl;
+cout << "------------------------------------------" << endl;
+cout << "..(K).. - Zapis aktualnego stanu.." << endl;
+cout << "..(L).. - Listowanie Listy alfabetycznie.." << endl;
+cout << "..(U).. - Usuniecie studenta ze sr.ocen 2.5.." << endl;
+cout << "..(D).. - Dodanie nowego studenta i jego cech(imie,nazwisko,wiek,srOcen,nrAlbumu) nie wiecej niz 20 uczniow.." << endl;
+cout << "..(X).. - Wyjscie z programu.." << endl;
+cout << "------------------------------------------" << endl;
+
 plik.close();
 
 plik.open( "studenci.txt", ios::in );
@@ -82,14 +91,6 @@ if(plik.is_open())
         cout << endl;
 	}
 
-cout << "          MENU LISTY UCZNIOW:       " << endl;
-cout << "------------------------------------------" << endl;
-cout << "..(K).. - Zapis aktualnego stanu.." << endl;
-cout << "..(L).. - Listowanie Listy alfabetycznie.." << endl;
-cout << "..(U).. - Usuniecie studenta ze sr.ocen 2.5.." << endl;
-cout << "..(D).. - Dodanie nowego studenta i jego cech(imie,nazwisko,wiek,srOcen,nrAlbumu) nie wiecej niz 20 uczniow.." << endl;
-cout << "..(X).. - Wyjscie z programu.." << endl;
-cout << "------------------------------------------" << endl;
 
 
 
