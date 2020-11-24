@@ -64,7 +64,6 @@ for(int i = 0; i < 5; i++){
 plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen << endl;
 } 
 
-
 cout << "          MENU LISTY UCZNIOW:       " << endl;
 cout << "------------------------------------------" << endl;
 cout << "..(K).. - Zapis aktualnego stanu.." << endl;
@@ -74,92 +73,27 @@ cout << "..(D).. - Dodanie nowego studenta i jego cech(imie,nazwisko,wiek,srOcen
 cout << "..(X).. - Wyjscie z programu.." << endl;
 cout << "------------------------------------------" << endl;
 
-plik.close();
-
-plik.open( "studenci.txt", ios::in );
-
-
-if(plik.is_open())
-	{
-		char wiersz[10000];
-
-		while(plik.getline(wiersz,10000)) 
-		{
-			cout<< wiersz << endl;
-			
-		}
-        cout << endl;
-	}
-
-
-
-
 char key = getch();
 int value = key;
 
 while(value != KEY_X){
     switch(getch()){
-
-
-
-        
-
         case KEY_L : //listowanie
 
-        plik.open( "studenci.txt", ios::in );
-
-
-        if(plik.is_open())
-	{
-		char wiersz[10000];
-
-		while(plik.getline(wiersz,10000)) 
-		{
-			cout << wiersz << endl;
-			
-		}
-        cout << endl;
-
-	}
-
-    //zapis
     for(int i; i < sizeof(uczniowie)/sizeof(uczniowie[i]); i++){
-    plik.open( "studenci.txt", ios::out | ios::app);
    
     //  sort(uczniowie, uczniowie + 5);
     //  for(auto ele: uczniowie){
     //      cout << ele << ", " << endl;
     //  }
-
-    plik.close();
-    }
-
-        
-
-        plik.open( "studenci.txt", ios::in );
-
-
-        if(plik.is_open())
-	{
-		char wiersz[10000];
-
-		while(plik.getline(wiersz,10000)) 
-		{
-			cout << wiersz << endl;
-			
-		}
-        cout << endl;
-
-	}
         
         cout << "Nazwiska zostały wylistowane!" << endl;
 
+        for(int i = 0; i < 5; i++){
+        plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen << endl;
+        } 
         break;
-
-
-
-
-
+    }
 
 
         case KEY_D : //dodawanie
@@ -187,6 +121,25 @@ while(value != KEY_X){
 
 key = getch();
 value = key;
+
+
+plik.close();
+
+plik.open( "studenci.txt", ios::in );
+
+
+if(plik.is_open())
+	{
+		char wiersz[10000];
+
+		while(plik.getline(wiersz,10000)) 
+		{
+			cout<< wiersz << endl;
+			
+		}
+        cout << endl;
+	}
+
 
     return 0;
 }
