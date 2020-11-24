@@ -101,12 +101,35 @@ while(value != KEY_X){
 
         case KEY_L : //listowanie
 
-        plik.open( "studenci.txt", ios::out | ios::app);
+        plik.open( "studenci.txt", ios::in );
 
 
+        if(plik.is_open())
+	{
+		char wiersz[10000];
 
+		while(plik.getline(wiersz,10000)) 
+		{
+			cout << wiersz << endl;
+			
+		}
+        cout << endl;
 
-        plik.close();
+	}
+
+    //zapis
+    for(int i; i < sizeof(uczniowie)/sizeof(uczniowie[i]); i++){
+    plik.open( "studenci.txt", ios::out | ios::app);
+   
+    //  sort(uczniowie, uczniowie + 5);
+    //  for(auto ele: uczniowie){
+    //      cout << ele << ", " << endl;
+    //  }
+
+    plik.close();
+    }
+
+        
 
         plik.open( "studenci.txt", ios::in );
 
@@ -117,14 +140,13 @@ while(value != KEY_X){
 
 		while(plik.getline(wiersz,10000)) 
 		{
-			cout<< wiersz << endl;
+			cout << wiersz << endl;
 			
 		}
         cout << endl;
 
 	}
         
-
         cout << "Nazwiska zostały wylistowane!" << endl;
 
         break;
