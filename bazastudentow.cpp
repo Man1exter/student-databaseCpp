@@ -61,7 +61,7 @@ for(int i = 0; i < 5; i++){
 cout << endl;
 
 for(int i = 0; i < 5; i++){
-plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" "<< uczniowie[i].wiek <<" "<< uczniowie[i].nrAlbumu <<" "<< uczniowie[i].srOcen << endl;
+plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
 } 
 
 cout << "          MENU LISTY UCZNIOW:       " << endl;
