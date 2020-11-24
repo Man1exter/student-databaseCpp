@@ -99,6 +99,10 @@ int value = key;
 while(value != KEY_X){
     switch(getch()){
 
+
+
+        
+
         case KEY_L : //listowanie
 
         plik.open( "studenci.txt", ios::in );
@@ -150,6 +154,12 @@ while(value != KEY_X){
         cout << "Nazwiska zostały wylistowane!" << endl;
 
         break;
+
+
+
+
+
+
 
         case KEY_D : //dodawanie
 
