@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <fstream>
 #include <conio.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -20,6 +21,7 @@ struct Osoba{
     float srOcen;
     int wiek;
 };
+
 
 int main(){
 
@@ -99,7 +101,31 @@ while(value != KEY_X){
 
         case KEY_L : //listowanie
 
-        cout<<endl;
+        plik.open( "studenci.txt", ios::in );
+
+
+        if(plik.is_open())
+	{
+		char wiersz[10000];
+
+		while(plik.getline(wiersz,10000)) 
+		{
+			cout<< wiersz << endl;
+			
+		}
+        cout << endl;
+
+	}
+        
+        // for(int i = 0; i < sizeof(uczniowie)/sizeof(uczniowie[0]); i++){
+        // cout << uczniowie[i] << ", ";
+        // }
+        // sort(uczniowie,uczniowie+20);
+        // for(auto ele: uczniowie){
+        //     cout << ele << ", ";
+        // }
+
+        cout << "Nazwiska zostały wylistowane!" << endl;
 
         break;
 
