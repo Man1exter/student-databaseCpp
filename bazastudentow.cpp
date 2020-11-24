@@ -64,6 +64,12 @@ for(int i = 0; i < 5; i++){
 plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
 } 
 
+for(int i = 0; i < 5; i++){
+cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
+} 
+
+cout << "Wprowadziles dane studentow do bazdy danych!" << endl;
+
 cout << "          MENU LISTY UCZNIOW:       " << endl;
 cout << "------------------------------------------" << endl;
 cout << "..(K).. - Zapis aktualnego stanu.." << endl;
@@ -76,8 +82,8 @@ cout << "------------------------------------------" << endl;
 char key = getch();
 int value = key;
 
-cout << "Podaj znak z menu (zaznaczony w ramce)" << endl;
-cin >> value;
+// cout << "Podaj znak z menu (zaznaczony w ramce)" << endl;
+// cin >> value;
 
 while(value != KEY_X){
     switch(getch()){
