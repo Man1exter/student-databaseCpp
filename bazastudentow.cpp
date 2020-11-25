@@ -88,6 +88,12 @@ while(value != KEY_X){
     switch(getch()){
         case KEY_L : //listowanie + duza litera pierwsza
 
+        for(int i = 0; i < 5; i++){
+        cout <<"Lista uczniów przed sortowaniem: " << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
+        } 
+
+        
+
         cout << "Nazwiska zostały wylistowane!" << endl;
 
         break;
