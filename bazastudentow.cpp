@@ -94,9 +94,11 @@ cout <<"Przed sortowaniem: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <
 
 cout << endl;
 
-for(int i; i<sizeof(uczniowie)/sizeof(uczniowie); i++){
-    cout << uczniowie << ", ";
-}
+
+
+
+
+cout << endl;
 
 
 for(int i = 0; i < 5; i++){
