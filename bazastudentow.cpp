@@ -88,12 +88,15 @@ while(value != KEY_X){
     switch(getch()){
         case KEY_L : //listowanie + duza litera pierwsza
 
-        for(int i = 0; i < 5; i++){
+for(int i = 0; i < 5; i++){
 cout <<"Przed sortowaniem: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
 } 
 
+cout << endl;
 
-
+for(int i; i<sizeof(uczniowie)/sizeof(uczniowie); i++){
+    cout << uczniowie << ", ";
+}
 
 
 for(int i = 0; i < 5; i++){
