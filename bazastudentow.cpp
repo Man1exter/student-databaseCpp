@@ -29,7 +29,7 @@ fstream plik;
 
 plik.open( "studenci.txt", ios::out | ios::app);
 
-Osoba uczniowie[20];
+Osoba uczniowie[20]{};
 
 for(int i = 0; i < 5; i++){
     cout << "podaj imie i nazwisko " << i+1 << " ucznia: " ;
@@ -94,8 +94,7 @@ cout <<"Przed sortowaniem: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <
 
 cout << endl;
 
-
-
+sort(uczniowie,uczniowie+20);
 
 
 cout << endl;
