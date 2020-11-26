@@ -20,6 +20,10 @@ struct Osoba{
     int nrAlbumu;
     float srOcen;
     int wiek;
+    bool operator < (const Osoba &x)const
+    {
+        return srOcen>x.srOcen;
+    }
 };
 
 
@@ -94,7 +98,7 @@ cout <<"Przed sortowaniem: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <
 
 cout << endl;
 
-sort(uczniowie,uczniowie+20);
+// funkcja sortujaca :)
 
 
 cout << endl;
