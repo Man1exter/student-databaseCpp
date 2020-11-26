@@ -101,7 +101,7 @@ cout <<"Przed sortowaniem: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <
 
 cout << endl;
 
-sort(uczniowie,uczniowie+20);
+sort(uczniowie,uczniowie+20); // odwrote zwrocenie dla lepszej przykladnosci i zwrocenia uwagi na alfabetycznosc :)
 
 
 cout << endl;
