@@ -22,7 +22,8 @@ struct Osoba{
     int wiek;
     bool operator < (const Osoba &x)const
     {
-        return srOcen>x.srOcen;
+        return imie>x.imie;
+        return nazwisko>x.nazwisko;
     }
 };
 
@@ -84,6 +85,8 @@ cout << "..(X).. - Wyjscie z programu.." << endl;
 cout << "------------------------------------------" << endl;
 cout << "Podaj znak(w ramce) do wywołania danej metody na liscie studentow/uczniow.."<<endl;
 
+cout << endl;
+
 char key = getch();
 int value = key;
 
@@ -98,7 +101,7 @@ cout <<"Przed sortowaniem: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <
 
 cout << endl;
 
-// funkcja sortujaca :)
+sort(uczniowie,uczniowie+5);
 
 
 cout << endl;
