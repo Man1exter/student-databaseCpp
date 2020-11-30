@@ -76,13 +76,13 @@ cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie
 cout << "Wprowadziles dane studentow do bazdy danych!" << endl;
 
 cout << "          MENU LISTY UCZNIOW:       " << endl;
-cout << "------------------------------------------" << endl;
+cout << "-------------------------------------------" << endl;
 cout << "..(K).. - Zapis aktualnego stanu.." << endl;
 cout << "..(L).. - Listowanie Listy alfabetycznie.." << endl;
 cout << "..(U).. - Usuniecie studenta ze sr.ocen 2.5.." << endl;
 cout << "..(D).. - Dodanie nowego studenta i jego cech(imie,nazwisko,wiek,srOcen,nrAlbumu) nie wiecej niz 20 uczniow.." << endl;
 cout << "..(X).. - Wyjscie z programu.." << endl;
-cout << "------------------------------------------" << endl;
+cout << "-------------------------------------------" << endl;
 cout << "Podaj znak(w ramce) do wywołania danej metody na liscie studentow/uczniow.."<<endl;
 
 cout << endl;
@@ -118,19 +118,19 @@ cout << endl;
         break;
     
 
-        case KEY_D : //dodawanie
+        case KEY_D : //dodawanie ucznia > 20 uczniow
 
         cout<<endl;
 
         break;
 
-        case KEY_U : //usuniecie
+        case KEY_U : //usuniecie z srocen 2.5
 
         cout<<endl;
 
         break;
 
-        case KEY_K : //zapis
+        case KEY_K : //zapis aktualnego stanu
 
         cout<<endl;
 
