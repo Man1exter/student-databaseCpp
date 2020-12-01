@@ -118,13 +118,13 @@ cout << endl;
         break;
     
 
-        case KEY_D : //dodawanie ucznia > 20 uczniow
+        case KEY_D : //dodawanie ucznia > 20 uczniow w grupie
 
         cout<<endl;
 
         break;
 
-        case KEY_U : //usuniecie z srocen 2.5
+        case KEY_U : //usuniecie z srocen 2.5 (opcjonalnie- konkretny)
 
         cout<<endl;
 
