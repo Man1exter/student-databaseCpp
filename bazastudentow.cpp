@@ -31,6 +31,9 @@ struct Osoba{
 };
 
 
+
+
+
 int main(){
 
 fstream plik;   
@@ -95,6 +98,7 @@ int value = key;
 
 
 
+
 while(value != KEY_X){
     switch(getch()){
         case KEY_L : //listowanie + duza litera calych imion i nazwisk
@@ -107,8 +111,7 @@ cout << endl;
 
 sort(uczniowie,uczniowie+20); // odwrote zwrocenie dla lepszej przykladnosci i zwrocenia uwagi na alfabetycznosc :)
 
-
-
+transform(Osoba uczniowie[20], ::toupper);
 
 
 cout << endl;
