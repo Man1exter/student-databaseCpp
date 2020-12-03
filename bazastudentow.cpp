@@ -116,7 +116,7 @@ cout << endl;
 
 
 for(int i = 0; i < 5; i++){
-transform(uczniowie[i].imie, uczniowie[i].nazwisko, ::toupper)    
+transform(uczniowie[i].imie, uczniowie[i].nazwisko, ::toupper);    
 cout <<"Po sortowaniu: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
 } 
 
