@@ -111,13 +111,12 @@ cout << endl;
 
 sort(uczniowie,uczniowie+20); // odwrote zwrocenie dla lepszej przykladnosci i zwrocenia uwagi na alfabetycznosc :)
 
-transform(Osoba uczniowie[20], ::toupper);
-
 
 cout << endl;
 
 
 for(int i = 0; i < 5; i++){
+transform(uczniowie[i].imie, uczniowie[i].nazwisko, ::toupper)    
 cout <<"Po sortowaniu: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
 } 
 
@@ -125,8 +124,7 @@ cout << endl;
 
 
 
-
-        cout << "Nazwiska zostały wylistowane i dodana zostala wielka litera imienia i nazwiska!" << endl;
+        cout << "Nazwiska zostały wylistowane i dodana zostala wielka litera imion i nazwisk!" << endl;
 
         break;
     
