@@ -113,6 +113,9 @@ cout <<"Po sortowaniu: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" m
 
 cout << endl;
 
+// pierwsza duza litera imienia i nazwiska 
+
+
         cout << "Nazwiska zostały wylistowane i dodana zostala pierwsza wielka litera imienia i nazwiska!" << endl;
 
         break;
