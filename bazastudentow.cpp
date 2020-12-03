@@ -185,6 +185,8 @@ cout << endl;
         cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
         } 
 
+        // error wyskakuje tylko jeden ostatni wpisany poprawka!!!!!!!!!!!!!!!! //
+
         cout<<endl;
 
         break;
@@ -192,7 +194,7 @@ cout << endl;
 
 
 
-        case KEY_U : //usuniecie z srocen 2.5 (opcjonalnie- konkretny)
+        case KEY_U : //usuniecie z srocen 2.5 (opcjonalnie - konkretny)
 
         cout<<endl;
 
