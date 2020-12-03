@@ -46,7 +46,9 @@ Osoba uczniowie[20]{};
 
 int liczbStudentow;
 
-cout << "Ilu studentow chcesz dodac?(nie wiecej niz 20!)" << endl;
+
+
+cout << "Ilu studentow chcesz dodac?   ----   (nie wiecej niz 20!)" << endl;
 cin >> liczbStudentow;
 
 if(liczbStudentow > 20){
