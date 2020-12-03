@@ -95,6 +95,7 @@ cout << endl;
 
 char key = getch();
 int value = key;
+char znak; // to przejerzdzaniu po znakach ciagu znakow w zdaniu
 
 
 
@@ -112,11 +113,20 @@ cout << endl;
 sort(uczniowie,uczniowie+20); // odwrote zwrocenie dla lepszej przykladnosci i zwrocenia uwagi na alfabetycznosc :)
 
 
+// while(znak!='.') //dopóki nie napotkamy na znak '.'
+// {
+// 	if(znak>95) //gdy napotkamy małą literę zamieniamy ją na dużą
+// 	  	cout<<(char)(znak-32); //przesuwając o 32 miejsca w kodzie ASCII
+// 	else
+// 		cout<<znak; 
+	
+// 	cin>>znak; //wczytujemy następny znak
+// }
+
 cout << endl;
 
 
-for(int i = 0; i < 5; i++){
-transform(uczniowie[i].imie, uczniowie[i].nazwisko, ::toupper);    
+for(int i = 0; i < 5; i++){   
 cout <<"Po sortowaniu: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
 } 
 
