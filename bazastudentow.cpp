@@ -95,8 +95,6 @@ cout << endl;
 
 char key = getch();
 int value = key;
-char znak; // to przejerzdzaniu po znakach ciagu znakow w zdaniu
-
 
 
 
@@ -113,38 +111,47 @@ cout << endl;
 sort(uczniowie,uczniowie+20); // odwrote zwrocenie dla lepszej przykladnosci i zwrocenia uwagi na alfabetycznosc :)
 
 
-// while(znak!='.') //dopóki nie napotkamy na znak '.'
-// {
-// 	if(znak>95) //gdy napotkamy małą literę zamieniamy ją na dużą
-// 	  	cout<<(char)(znak-32); //przesuwając o 32 miejsca w kodzie ASCII
-// 	else
-// 		cout<<znak; 
-	
-// 	cin>>znak; //wczytujemy następny znak
-// }
-
 cout << endl;
+
 
 
 for(int i = 0; i < 5; i++){   
-    if(uczniowie[i].imie || uczniowie[i].nazwisko > 95){
 cout <<"Po sortowaniu: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
-    }
 } 
 
 cout << endl;
-
 
         cout << "Nazwiska zostały wylistowane i dodana zostala wielka litera imion i nazwisk!" << endl;
 
         break;
     
 
+
+
         case KEY_D : //dodawanie ucznia > 20 uczniow w grupie
+
+        cout << "Dodaj nowego ucznia do listy uczniow, ale nie moze byc wiecej niz 20 na liscie studentow" << endl;
+        cout << "Podaj imie: " << endl;
+        cout << "Podaj nazwisko: " << endl;
+        cout << "Podaj nr.albumu: " << endl;
+        cout << "Podaj wiek: " << endl;
+        cout << "Podaj sr.ocen: " << endl;
+
+        cout << endl;
+
+        cout << "uczen zostal dodany do listy uczniow" << endl;
+        cout << endl;
+
+        for(int i = 0; i < 20; i++){   
+        cout <<"Po dodaniu lista uczniow: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
+        } 
 
         cout<<endl;
 
         break;
+
+
+
 
         case KEY_U : //usuniecie z srocen 2.5 (opcjonalnie- konkretny)
 
