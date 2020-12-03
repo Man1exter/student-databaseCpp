@@ -36,13 +36,26 @@ struct Osoba{
 
 int main(){
 
+
+
 fstream plik;   
 
 plik.open( "studenci.txt", ios::out | ios::app);
 
 Osoba uczniowie[20]{};
 
-for(int i = 0; i < 5; i++){
+int liczbStudentow;
+
+cout << "Ilu studentow chcesz dodac?(nie wiecej niz 20!)" << endl;
+cin >> liczbStudentow;
+
+if(liczbStudentow > 20){
+    cout << "nie wiecej niz 20 w bazie danych, komputer wybuchnie" << endl;
+    cout << "podaj ile poprawnie dodac" << endl;
+    cin >> liczbStudentow;
+}
+
+for(int i = 0; i < liczbStudentow; i++){
     cout << "podaj imie i nazwisko " << i+1 << " ucznia: " ;
     cin >> uczniowie[i].imie;
     cin >> uczniowie[i].nazwisko;
@@ -50,36 +63,40 @@ for(int i = 0; i < 5; i++){
 
 cout << endl;
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < liczbStudentow; i++){
     cout << "podaj numer albumu " << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ";
     cin >> uczniowie[i].nrAlbumu;
 }
 
 cout << endl;
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < liczbStudentow; i++){
     cout << "podaj wiek " << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ";
     cin >> uczniowie[i].wiek;
 }
 
 cout << endl;
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < liczbStudentow; i++){
     cout << "podaj srednia ocen: " << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ";
     cin >> uczniowie[i].srOcen;
 }
 
 cout << endl;
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < liczbStudentow; i++){
 plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
 } 
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < liczbStudentow; i++){
 cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
 } 
 
+cout << endl;
+
 cout << "Wprowadziles dane studentow do bazdy danych!" << endl;
+
+cout << endl;
 
 cout << "          MENU LISTY UCZNIOW:       " << endl;
 cout << "-------------------------------------------" << endl;
@@ -95,14 +112,14 @@ cout << endl;
 
 char key = getch();
 int value = key;
-int liczbStudentow;
+
 
 
 while(value != KEY_X){
     switch(getch()){
         case KEY_L : //listowanie + duza litera calych imion i nazwisk
 
-for(int i = 0; i < 5; i++){
+for(int i = 0; i < liczbStudentow; i++){
 cout <<"Przed sortowaniem: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
 } 
 
@@ -110,12 +127,10 @@ cout << endl;
 
 sort(uczniowie,uczniowie+20); // odwrote zwrocenie dla lepszej przykladnosci i zwrocenia uwagi na alfabetycznosc :)
 
-
 cout << endl;
 
 
-
-for(int i = 0; i < 5; i++){   
+for(int i = 0; i < liczbStudentow; i++){   
 cout <<"Po sortowaniu: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
 } 
 
@@ -137,16 +152,15 @@ cout << endl;
         cin >> liczbStudentow;
 
         if(liczbStudentow > 20){
-            cout << "nie wiecej niz 20 nowych stydentow, pamietaj o tym, popraw sie" << endl;
+            cout << "nie wiecej niz 20 nowych studentow, pamietaj o tym, popraw sie" << endl;
             cin >> liczbStudentow;
         } 
             
         cout << endl;
 
         for(int i = 0; i < liczbStudentow; i++){  
-        cout << "Podaj imie: " << endl;
+        cout << "Podaj imie i nazwisko: " << endl;
         cin >> uczniowie[i].imie;
-        cout << "Podaj nazwisko: " << endl;
         cin >> uczniowie[i].nazwisko;
         cout << "Podaj nr.albumu: " << endl;
         cin >> uczniowie[i].nrAlbumu;
@@ -158,16 +172,12 @@ cout << endl;
 
         cout << endl;
 
-        cout << "uczen zostal dodany do listy uczniow" << endl;
-
+        cout << "Lista uczniow aktualnie wyglada tak: " << endl;
         cout << endl;
 
-        for(int i = 0; i < 5; i++){   
-        plik <<"Po dodaniu lista uczniow: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
-        } 
 
-        for(int i = 0; i < 5; i++){   
-        cout <<"Po dodaniu lista uczniow: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
+        for(int i = 0; i < liczbStudentow; i++){
+        cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
         } 
 
         cout<<endl;
