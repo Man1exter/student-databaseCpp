@@ -1,9 +1,11 @@
 #include <iostream>
+#include <cstring>
 #include <string>
 #include <stdio.h>
 #include <fstream>
 #include <conio.h>
 #include <algorithm>
+#include <cctype> // duze litery touppercase keycode 
 
 using namespace std;
 
@@ -91,9 +93,10 @@ char key = getch();
 int value = key;
 
 
+
 while(value != KEY_X){
     switch(getch()){
-        case KEY_L : //listowanie + duza litera pierwsza
+        case KEY_L : //listowanie + duza litera calych imion i nazwisk
 
 for(int i = 0; i < 5; i++){
 cout <<"Przed sortowaniem: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
@@ -102,6 +105,9 @@ cout <<"Przed sortowaniem: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <
 cout << endl;
 
 sort(uczniowie,uczniowie+20); // odwrote zwrocenie dla lepszej przykladnosci i zwrocenia uwagi na alfabetycznosc :)
+
+
+
 
 
 cout << endl;
@@ -113,10 +119,10 @@ cout <<"Po sortowaniu: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" m
 
 cout << endl;
 
-// pierwsza duza litera imienia i nazwiska 
 
 
-        cout << "Nazwiska zostały wylistowane i dodana zostala pierwsza wielka litera imienia i nazwiska!" << endl;
+
+        cout << "Nazwiska zostały wylistowane i dodana zostala wielka litera imienia i nazwiska!" << endl;
 
         break;
     
