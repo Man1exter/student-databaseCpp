@@ -127,11 +127,12 @@ cout << endl;
 
 
 for(int i = 0; i < 5; i++){   
+    if(uczniowie[i].imie || uczniowie[i].nazwisko > 95){
 cout <<"Po sortowaniu: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
+    }
 } 
 
 cout << endl;
-
 
 
         cout << "Nazwiska zostały wylistowane i dodana zostala wielka litera imion i nazwisk!" << endl;
