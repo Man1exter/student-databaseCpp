@@ -6,6 +6,7 @@
 #include <conio.h>
 #include <algorithm>
 #include <cctype> // duze litery touppercase keycode 
+#include <iterator>
 
 using namespace std;
 
