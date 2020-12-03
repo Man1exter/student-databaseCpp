@@ -95,7 +95,7 @@ cout << endl;
 
 char key = getch();
 int value = key;
-
+int liczbStudentow;
 
 
 while(value != KEY_X){
@@ -128,21 +128,45 @@ cout << endl;
 
 
 
-        case KEY_D : //dodawanie ucznia > 20 uczniow w grupie
+        case KEY_D : //dodawanie ucznia > 20 uczniow w grupie/ na liscie
 
-        cout << "Dodaj nowego ucznia do listy uczniow, ale nie moze byc wiecej niz 20 na liscie studentow" << endl;
+        cout << "Dodaj nowego ucznia/uczniow do listy uczniow, ale nie moze byc wiecej niz 20 na liscie studentow" << endl;
+        cout << endl;
+
+        cout << "Ilu uczniow chcesz dodac do listy studentwo?" << endl;
+        cin >> liczbStudentow;
+
+        if(liczbStudentow > 20){
+            cout << "nie wiecej niz 20 nowych stydentow, pamietaj o tym, popraw sie" << endl;
+            cin >> liczbStudentow;
+        } 
+            
+        cout << endl;
+
+        for(int i = 0; i < liczbStudentow; i++){  
         cout << "Podaj imie: " << endl;
+        cin >> uczniowie[i].imie;
         cout << "Podaj nazwisko: " << endl;
+        cin >> uczniowie[i].nazwisko;
         cout << "Podaj nr.albumu: " << endl;
+        cin >> uczniowie[i].nrAlbumu;
         cout << "Podaj wiek: " << endl;
+        cin >> uczniowie[i].wiek;
         cout << "Podaj sr.ocen: " << endl;
+        cin >> uczniowie[i].srOcen;
+}
 
         cout << endl;
 
         cout << "uczen zostal dodany do listy uczniow" << endl;
+
         cout << endl;
 
-        for(int i = 0; i < 20; i++){   
+        for(int i = 0; i < 5; i++){   
+        plik <<"Po dodaniu lista uczniow: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
+        } 
+
+        for(int i = 0; i < 5; i++){   
         cout <<"Po dodaniu lista uczniow: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
         } 
 
