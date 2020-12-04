@@ -186,6 +186,8 @@ cout << endl;
         } 
 
         // error wyskakuje tylko jeden ostatni wpisany poprawka!!!!!!!!!!!!!!!! //
+        // dopisanie innych klas do pojedynczego i calego
+        // lub ew.pushowanie do tablicy
 
         cout<<endl;
 
