@@ -167,7 +167,7 @@ cout << endl;
 
         cout << endl;
 
-        cout << "Lista uczniow aktualnie wyglada tak: " << endl;
+        cout << "Aktualnie dodales do listy: " << endl;
         cout << endl;
 
         for(int i = 0; i < liczbStudentow; i++){
@@ -177,10 +177,6 @@ cout << endl;
         for(int i = 0; i < liczbStudentow; i++){
         cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
         } 
-
-        // error wyskakuje tylko jeden ostatni wpisany poprawka!!!!!!!!!!!!!!!! //
-        // dopisanie innych klas do pojedynczego i calego
-        // lub ew.pushowanie do tablicy
 
         cout<<endl;
 
