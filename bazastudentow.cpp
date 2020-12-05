@@ -44,7 +44,7 @@ plik.open( "studenci.txt", ios::out | ios::app);
 
 Osoba uczniowie[20]{};
 
-int liczbStudentow;
+int liczbStudentow; // ograniczenie w dodawaniu po nacisnieciu K w menu
 
 
 
@@ -147,17 +147,10 @@ cout << endl;
 
         case KEY_D : //dodawanie ucznia > 20 uczniow w grupie/ na liscie
 
-        cout << "Dodaj nowego ucznia/uczniow do listy uczniow, ale nie moze byc wiecej niz 20 na liscie studentow" << endl;
+        cout << "Dodaj nowego ucznia, ale nie moze byc wiecej niz 20 na liscie studentow" << endl;
+
         cout << endl;
-
-        cout << "Ilu uczniow chcesz dodac do listy studentwo?" << endl;
-        cin >> liczbStudentow;
-
-        if(liczbStudentow > 20){
-            cout << "nie wiecej niz 20 nowych studentow, pamietaj o tym, popraw sie" << endl;
-            cin >> liczbStudentow;
-        } 
-            
+      
         cout << endl;
 
         for(int i = 0; i < liczbStudentow; i++){  
