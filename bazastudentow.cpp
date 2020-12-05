@@ -206,16 +206,13 @@ cout << endl;
 
         case KEY_K : //zapis aktualnego stanu(opcjonalnie - pokazanie all listy uczniow)
 
-        cout << "Zapis wszystkich operacji z menu!" << endl;
+        cout << "Zapisano wszystkie operacje z menu!" << endl;
         cout << "Możesz zobaczyc cala liste uczniow naciskajac teraz klawisz X" << endl;
         cout << "Aktualnie skorzystales z dziennika studentow, milego dnia :)" << endl;
 
         cout<<endl;
         break;
         
-
-
-
 
         default: //wyjscie
         cout << "Aktualnie skorzystales z dziennika studentow, milego dnia :)" << endl;
