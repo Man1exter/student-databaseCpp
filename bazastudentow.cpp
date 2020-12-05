@@ -138,7 +138,7 @@ cout <<"Po sortowaniu: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" m
 
 cout << endl;
 
-        cout << "Nazwiska zostały wylistowane i dodana zostala wielka litera imion i nazwisk!" << endl;
+        cout << "Nazwiska zostały wylistowane" << endl;
 
         break;
     
@@ -156,7 +156,7 @@ cout << endl;
         cout << endl;
 
         for(int i = 0; i < nowe; i++){  
-        cout << "Podaj imie i nazwisko" << i+1 << "nowo dodanego ucznia: ";
+        cout << "Podaj imie i nazwisko " << i+1 << " nowo dodanego ucznia: ";
         cin >> uczniowie[i].imie;
         cin >> uczniowie[i].nazwisko;
         cout << "Podaj nr.albumu: ";
@@ -209,7 +209,7 @@ cout << endl;
        cout << "Aktualna lista studentow wyglada nastepujaco: " << endl;
        cout << endl;
 
-       for(int i = 0; i < liczbStudentow+nowe; i++){   
+       for(int i = 0; i < liczbStudentow + nowe; i++){   
        cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
        } 
 
