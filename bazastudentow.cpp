@@ -44,7 +44,7 @@ plik.open( "studenci.txt", ios::out | ios::app);
 
 Osoba uczniowie[20]{};
 
-int liczbStudentow; // ograniczenie w dodawaniu po nacisnieciu K w menu
+int liczbStudentow; // ograniczenie w dodawaniu 
 
 
 
@@ -114,7 +114,7 @@ cout << endl;
 
 char key = getch();
 int value = key;
-
+int nowe;
 
 
 while(value != KEY_X){
@@ -147,14 +147,16 @@ cout << endl;
 
         case KEY_D : //dodawanie ucznia > 20 uczniow w grupie/ na liscie
 
-        cout << "Dodaj nowego ucznia, ale nie moze byc wiecej niz 20 na liscie studentow" << endl;
+        cout << "Dodaj nowego ucznia/uczniow, ale nie moze byc wiecej niz 20 na liscie studentow" << endl;
+        cout << "Ile osob?" << endl;
+        cin >> nowe;
 
         cout << endl;
       
         cout << endl;
 
-        for(int i = 0; i < 1; i++){  
-        cout << "Podaj imie i nazwisko: ";
+        for(int i = 0; i < nowe; i++){  
+        cout << "Podaj imie i nazwisko" << i+1 << "nowo dodanego ucznia: ";
         cin >> uczniowie[i].imie;
         cin >> uczniowie[i].nazwisko;
         cout << "Podaj nr.albumu: ";
@@ -170,11 +172,11 @@ cout << endl;
         cout << "Aktualnie dodales do listy: " << endl;
         cout << endl;
 
-        for(int i = 0; i < 1; i++){
+        for(int i = 0; i < nowe; i++){
         plik << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
         } 
 
-        for(int i = 0; i < 1; i++){
+        for(int i = 0; i < nowe; i++){
         cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
         } 
 
@@ -204,11 +206,22 @@ cout << endl;
 
         case KEY_K : //zapis aktualnego stanu(opcjonalnie - pokazanie all listy uczniow)
 
-        cout<<endl;
+       cout << "Aktualna lista studentow wyglada nastepujaco: " << endl;
+       cout << endl;
 
+       for(int i = 0; i < liczbStudentow+nowe; i++){   
+       cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
+       } 
+
+        cout<<endl;
         break;
         
+
+
+
+
         default: //wyjscie
+        cout << "Aktualnie skorzystales z dziennika studentow, milego dnia :)" << endl;
         exit(1);
     }
 }
