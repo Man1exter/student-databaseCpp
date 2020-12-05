@@ -153,15 +153,15 @@ cout << endl;
       
         cout << endl;
 
-        for(int i = 0; i < liczbStudentow; i++){  
-        cout << "Podaj imie i nazwisko: " << endl;
+        for(int i = 0; i < 1; i++){  
+        cout << "Podaj imie i nazwisko: ";
         cin >> uczniowie[i].imie;
         cin >> uczniowie[i].nazwisko;
-        cout << "Podaj nr.albumu: " << endl;
+        cout << "Podaj nr.albumu: ";
         cin >> uczniowie[i].nrAlbumu;
-        cout << "Podaj wiek: " << endl;
+        cout << "Podaj wiek: ";
         cin >> uczniowie[i].wiek;
-        cout << "Podaj sr.ocen: " << endl;
+        cout << "Podaj sr.ocen: ";
         cin >> uczniowie[i].srOcen;
 }
 
@@ -187,11 +187,22 @@ cout << endl;
 
         case KEY_U : //usuniecie z srocen 2.5 (opcjonalnie - konkretny)
 
+
+
+
         cout<<endl;
+
+
+
 
         break;
 
-        case KEY_K : //zapis aktualnego stanu
+
+
+
+
+
+        case KEY_K : //zapis aktualnego stanu(opcjonalnie - pokazanie all listy uczniow)
 
         cout<<endl;
 
