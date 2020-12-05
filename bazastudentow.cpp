@@ -206,12 +206,9 @@ cout << endl;
 
         case KEY_K : //zapis aktualnego stanu(opcjonalnie - pokazanie all listy uczniow)
 
-       cout << "Aktualna lista studentow wyglada nastepujaco: " << endl;
-       cout << endl;
-
-       for(int i = 0; i < liczbStudentow + nowe; i++){   
-       cout << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
-       } 
+        cout << "Zapis wszystkich operacji z menu!" << endl;
+        cout << "Możesz zobaczyc cala liste uczniow naciskajac teraz klawisz X" << endl;
+        cout << "Aktualnie skorzystales z dziennika studentow, milego dnia :)" << endl;
 
         cout<<endl;
         break;
@@ -237,6 +234,9 @@ plik.open( "studenci.txt", ios::in );
 
 if(plik.is_open())
 	{
+        cout << "Aktualna lista studentow wyglada nastepujaco: " << endl;
+        cout << endl;
+
 		char wiersz[10000];
 
 		while(plik.getline(wiersz,10000)) 
