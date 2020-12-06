@@ -190,15 +190,20 @@ cout << endl;
         case KEY_U : //usuniecie z srocen 2.5 
 
         for(int i = 0; i < liczbStudentow + nowe; i++){
-            if(uczniowie[i].srOcen <= 2.5){
-            
-            } else {
-                cout << "Nie ma studenta ze srednia ocen 2.5 lub mniej, przejdz dalej" << endl;
-            }
-        }
+            if(uczniowie[i].srOcen >= 2.5){
 
-        cout << "Zostala usunieta osoba z srednia ocen 2.5 lub mniejsza" << endl;
-        cout<<endl;
+              cout << "osoba ktora zostanie usunieta to: " << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
+             
+                              cout << endl;
+
+                              
+
+                              cout << endl;
+             cout << "Zostala usunieta osoba z srednia ocen 2.5 lub mniejsza" << " " << uczniowie[i].imie << "   "<< uczniowie[i].nazwisko << endl;
+                          cout<<endl;
+        }
+    }
+
 
         break;
 
