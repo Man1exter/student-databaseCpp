@@ -187,7 +187,7 @@ cout << endl;
 
 
 
-        case KEY_U : //usuniecie z srocen 2.5 (opcjonalnie - konkretny) pobierane z srocen mniejszej..
+        case KEY_U : //usuniecie z srocen 2.5 
 
         for(int i = 0; i < liczbStudentow + nowe; i++){
             if(uczniowie[i].srOcen <= 2.5){
@@ -203,7 +203,7 @@ cout << endl;
         break;
 
 
-        case KEY_K : //zapis aktualnego stanu(opcjonalnie - pokazanie all listy uczniow)
+        case KEY_K : //zapis aktualnego stanu
 
         cout << "Zapisano wszystkie operacje wykonane w menu!" << endl;
         cout << "Możesz zobaczyc cala liste uczniow naciskajac teraz --( X )-- i odrazu wyjsc z programu" << endl;
