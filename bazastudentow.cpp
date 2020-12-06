@@ -191,13 +191,11 @@ cout << endl;
 
         for(int i = 0; i < liczbStudentow + nowe; i++){
             if(uczniowie[i].srOcen <= 2.5){
-             delete ;
+            
             } else {
                 cout << "Nie ma studenta ze srednia ocen 2.5 lub mniej, przejdz dalej" << endl;
             }
         }
-
-
 
         cout << "Zostala usunieta osoba z srednia ocen 2.5 lub mniejsza" << endl;
         cout<<endl;
@@ -208,7 +206,7 @@ cout << endl;
         case KEY_K : //zapis aktualnego stanu(opcjonalnie - pokazanie all listy uczniow)
 
         cout << "Zapisano wszystkie operacje wykonane w menu!" << endl;
-        cout << "Możesz zobaczyc cala liste uczniow naciskajac teraz klawisz X" << endl;
+        cout << "Możesz zobaczyc cala liste uczniow naciskajac teraz --( X )-- i odrazu wyjsc z programu" << endl;
         cout << "Aktualnie skorzystales z dziennika studentow, milego dnia :)" << endl;
 
         cout<<endl;
