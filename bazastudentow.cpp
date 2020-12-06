@@ -200,7 +200,9 @@ cout << endl;
              
                               cout << endl;
 
-                
+                // place to delete person
+
+
                               cout << endl;
              cout << "Zostala usunieta osoba z srednia ocen 2.5 lub mniejsza" << endl;
                           cout<<endl;
