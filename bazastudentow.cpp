@@ -189,6 +189,14 @@ cout << endl;
 
         case KEY_U : //usuniecie z srocen 2.5 (opcjonalnie - konkretny) pobierane z srocen mniejszej..
 
+        for(int i = 0; i < liczbStudentow + nowe; i++){
+            if(uczniowie[i].srOcen <= 2.5){
+             delete ;
+            } else {
+                cout << "Nie ma studenta ze srednia ocen 2.5 lub mniej, przejdz dalej" << endl;
+            }
+        }
+
 
 
         cout << "Zostala usunieta osoba z srednia ocen 2.5 lub mniejsza" << endl;
@@ -199,7 +207,7 @@ cout << endl;
 
         case KEY_K : //zapis aktualnego stanu(opcjonalnie - pokazanie all listy uczniow)
 
-        cout << "Zapisano wszystkie operacje z menu!" << endl;
+        cout << "Zapisano wszystkie operacje wykonane w menu!" << endl;
         cout << "Możesz zobaczyc cala liste uczniow naciskajac teraz klawisz X" << endl;
         cout << "Aktualnie skorzystales z dziennika studentow, milego dnia :)" << endl;
 
