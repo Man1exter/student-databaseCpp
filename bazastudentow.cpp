@@ -139,6 +139,7 @@ cout <<"Po sortowaniu: "<< uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" m
 cout << endl;
 
         cout << "Nazwiska zostały wylistowane" << endl;
+        cout << endl;
 
         break;
     
@@ -185,37 +186,14 @@ cout << endl;
         break;
 
 
+        case KEY_U : //usuniecie studenta ze srocen 2.5 lub mniej
 
+        cout << "Zostanie usunieta osoba ze srednia ocen 2.5 lub mniej" << endl;
+        cout << endl;
+       
+       
 
-        case KEY_U : //usuniecie z srocen 2.5 
-
-        for(int i = 0; i < 1; i++){
-            if(uczniowie[i].srOcen <= 2.5){
-
-             cout << "Aktualnie nie ma osoby ktora ma srednia mniejsza lub rowna 2.5" << endl;
-             cout << endl;
-
-            } else {
-              cout << "Osoba ktora zostanie usunieta to: " << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko <<" ma lat "<< uczniowie[i].wiek <<" numer albumu: "<< uczniowie[i].nrAlbumu <<" oraz średnia ocen to: "<< uczniowie[i].srOcen << endl;
-             
-                              cout << endl;
-
-               for(int i = 0; i < 1; i++){
-                uczniowie[i].imie = " ";
-                uczniowie[i].nazwisko = " ";
-                uczniowie[i].nrAlbumu = " ";
-                uczniowie[i].wiek = " ";
-                uczniowie[i].srOcen = " ";
-               }
-
-
-                              cout << endl;
-             cout << "Zostala usunieta osoba z srednia ocen 2.5 lub mniejsza" << endl;
-                          cout<<endl;
-        }
-    }
-
-
+        cout << endl;
         break;
 
 
