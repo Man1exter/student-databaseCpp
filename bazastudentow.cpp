@@ -199,8 +199,10 @@ cout << endl;
 
        } else {
 
+           // place to delete student
+
        cout << endl;
-       cout << "zostala usuniety student" << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko << " z listy.." << endl; 
+       cout << "zostal usuniety student" << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko << " z listy i bazy uczniow.." << endl; 
        cout << endl;
        }
        }
