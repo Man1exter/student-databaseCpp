@@ -190,7 +190,7 @@ cout << endl;
         case KEY_U : //usuniecie z srocen 2.5 
 
         for(int i = 0; i < 1; i++){
-            if(uczniowie[i].srOcen >= 2.5){
+            if(uczniowie[i].srOcen <= 2.5){
 
              cout << "Aktualnie nie ma osoby ktora ma srednia mniejsza lub rowna 2.5" << endl;
              cout << endl;
@@ -200,7 +200,13 @@ cout << endl;
              
                               cout << endl;
 
-                // place to delete person
+               for(int i = 0; i < 1; i++){
+                uczniowie[i].imie = " ";
+                uczniowie[i].nazwisko = " ";
+                uczniowie[i].nrAlbumu = " ";
+                uczniowie[i].wiek = " ";
+                uczniowie[i].srOcen = " ";
+               }
 
 
                               cout << endl;

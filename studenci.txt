@@ -1,11 +1,6 @@
-ogar sie ma lat 12 numer albumu: 1221 oraz średnia ocen to: 5
-ty mendo ma lat 1 numer albumu: 1221 oraz średnia ocen to: 2
-miecio gej ma lat 18 numer albumu: 222 oraz średnia ocen to: 4
-aloszka ej ma lat 19 numer albumu: 222 oraz średnia ocen to: 2
-ee ee ma lat 33 numer albumu: 12 oraz średnia ocen to: 2
-ee ee ma lat 33 numer albumu: 12 oraz średnia ocen to: 6
-elo elo ma lat 55 numer albumu: 122 oraz średnia ocen to: 2
-ss ss ma lat 55 numer albumu: 122 oraz średnia ocen to: 5
-elo elo ma lat 22 numer albumu: 22 oraz średnia ocen to: 2
-henry brzask ma lat 12 numer albumu: 1222 oraz średnia ocen to: 2
-enio krzak ma lat 12 numer albumu: 1222 oraz średnia ocen to: 5
+  ma lat 0 numer albumu: 0 oraz średnia ocen to: 0
+   ma lat 0 numer albumu: 0 oraz średnia ocen to: 0
+marek ogarek ma lat 18 numer albumu: 1221 oraz średnia ocen to: 5
+arek skwarek ma lat 18 numer albumu: 1221 oraz średnia ocen to: 2
+marek ogarek ma lat 19 numer albumu: 21 oraz średnia ocen to: 2
+elo wina ma lat 19 numer albumu: 21 oraz średnia ocen to: 5
