@@ -11,3 +11,5 @@ dominik chuj ma lat 21 numer albumu: 12 oraz średnia ocen to: 3
 ziemowit siema ma lat 21 numer albumu: 12 oraz średnia ocen to: 6
 ziemowit siema ma lat 12 numer albumu: 12 oraz średnia ocen to: 5
 adam siema ma lat 12 numer albumu: 12 oraz średnia ocen to: 2
+es es ma lat 21 numer albumu: 12 oraz średnia ocen to: 5
+se se ma lat 21 numer albumu: 12 oraz średnia ocen to: 2

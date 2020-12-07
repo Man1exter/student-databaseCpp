@@ -204,10 +204,6 @@ cout << endl;
        cout << endl;
        }
        }
-
-        cout << endl;
-        cout << "..Zostala usunieta osoba ze srednia ocen 2.5 lub mniej.." << endl;
-        cout << endl;
         break;
 
 
