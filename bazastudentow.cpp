@@ -191,8 +191,16 @@ cout << endl;
         cout << "Zostanie usunieta osoba ze srednia ocen 2.5 lub mniej" << endl;
         cout << endl;
        
-       
+       for(int i = 0; i < liczbStudentow + nowe; i++){
+       if(uczniowie[i].srOcen <= 2.5){
+        
+       } else {
 
+       }
+       }
+
+        cout << endl;
+        cout << "..Zostala usunieta osoba ze srednia ocen 2.5 lub mniej.." << endl;
         cout << endl;
         break;
 
