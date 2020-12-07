@@ -192,9 +192,13 @@ cout << endl;
         cout << endl;
        
        for(int i = 0; i < liczbStudentow + nowe; i++){
-       if(uczniowie[i].srOcen <= 2.5){
+       if(uczniowie[i].srOcen >= 2.5){   //prawda - wejdzie / false - else  2 >= 2.5
         
+        cout << " Aktualnie nie ma studenta ze srednia ocen 2.5 lub mniej" << endl;
+        cout << endl;
+
        } else {
+           
 
        }
        }
