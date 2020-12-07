@@ -198,8 +198,10 @@ cout << endl;
         cout << endl;
 
        } else {
-           
 
+       cout << endl;
+       cout << "zostala usuniety student" << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko << " z listy.." << endl; 
+       cout << endl;
        }
        }
 
