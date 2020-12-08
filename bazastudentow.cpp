@@ -191,7 +191,7 @@ cout << endl;
         cout << "Zostanie usunieta osoba ze srednia ocen 2.5 lub mniej" << endl;
         cout << endl;
        
-       for(int i = 0; i < liczbStudentow + nowe; i++){
+       for(int i = 0; i < 1; i++){
        if(uczniowie[i].srOcen >= 2.5){   //prawda - wejdzie / false - else  2 >= 2.5
         
         cout << " Aktualnie nie ma studenta ze srednia ocen 2.5 lub mniej" << endl;
@@ -199,7 +199,14 @@ cout << endl;
 
        } else {
 
-           // place to delete student
+           for(int i = 0; i < 1; i++){
+               cout << uczniowie[i].imie;
+               cout << uczniowie[i].nazwisko;
+               cout << uczniowie[i].nrAlbumu;
+               cout << uczniowie[i].wiek;
+               cout << uczniowie[i].srOcen;
+           }
+           cout << endl;
 
        cout << endl;
        cout << "zostal usuniety student" << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko << " z listy i bazy uczniow.." << endl; 
