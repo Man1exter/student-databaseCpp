@@ -203,7 +203,7 @@ cout << endl;
                cout << uczniowie[i].imie;
                cout << endl;
                cout << uczniowie[i].nazwisko;
-           }
+           } // miejsce do zrobienia czegos co odejmie z tablicy osobe z 2.5 lub mniej XD
         cout << endl;
         cout << "zostal usuniety student z listy i bazy uczniow.." << endl; 
         cout << "Jego srednia nie pozwala mu sie dalej kwalifikowac bo wynosi 2.5 lub mniej ;)" << endl;
