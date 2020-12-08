@@ -201,10 +201,8 @@ cout << endl;
 
            for(int i = 0; i < 1; i++){
                cout << uczniowie[i].imie;
+               cout << endl;
                cout << uczniowie[i].nazwisko;
-               cout << uczniowie[i].nrAlbumu;
-               cout << uczniowie[i].wiek;
-               cout << uczniowie[i].srOcen;
            }
            cout << endl;
 
