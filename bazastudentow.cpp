@@ -204,15 +204,13 @@ cout << endl;
                cout << endl;
                cout << uczniowie[i].nazwisko;
            }
-           
-           cout << endl;
+        cout << endl;
+        cout << "zostal usuniety student z listy i bazy uczniow.." << endl; 
+        cout << "Jego srednia nie pozwala mu sie dalej kwalifikowac bo wynosi 2.5 lub mniej ;)" << endl;
+        cout << endl;
+       }
+       }
 
-       cout << endl;
-       cout << "zostal usuniety student" << uczniowie[i].imie <<" "<< uczniowie[i].nazwisko << " z listy i bazy uczniow.." << endl; 
-       cout << "Jego srednia nie pozwala mu sie dalej kwalifikowac bo wynosi 2.5 lub mniej ;)" << endl;
-       cout << endl;
-       }
-       }
         break;
 
 
