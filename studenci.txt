@@ -1,3 +1,5 @@
 eryk kamil ma lat 12 numer albumu: 1221 oraz średnia ocen to: 5
 wieszak emil ma lat 11 numer albumu: 1221 oraz średnia ocen to: 2
 nie ma ma lat 12 numer albumu: 1221 oraz średnia ocen to: 11
+marek siema ma lat 1 numer albumu: 12 oraz średnia ocen to: 2
+marek ogarek ma lat 12 numer albumu: 122 oraz średnia ocen to: 5
