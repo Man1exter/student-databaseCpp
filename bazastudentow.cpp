@@ -204,6 +204,7 @@ cout << endl;
                cout << endl;
                cout << uczniowie[i].nazwisko;
            }
+           
            cout << endl;
 
        cout << endl;
