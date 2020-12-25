@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <cctype> // duze litery touppercase keycode 
 #include <iterator>
+#include <vector>
 
 using namespace std;
 
@@ -43,6 +44,7 @@ fstream plik;
 plik.open( "studenci.txt", ios::out | ios::app);
 
 Osoba uczniowie[20]{};
+
 
 int liczbStudentow; // ograniczenie w dodawaniu 
 
@@ -203,8 +205,8 @@ cout << endl;
                cout << uczniowie[i].imie;
                cout << endl;
                cout << uczniowie[i].nazwisko;
-
-            
+               
+               i--;
 
                cout << endl;
         cout << "zostal usuniety student z listy i bazy uczniow.." << endl; 
