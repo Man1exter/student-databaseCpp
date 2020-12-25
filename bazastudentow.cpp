@@ -206,7 +206,6 @@ cout << endl;
                cout << endl;
                cout << uczniowie[i].nazwisko;
                
-               i--;
 
                cout << endl;
         cout << "zostal usuniety student z listy i bazy uczniow.." << endl; 
