@@ -266,7 +266,7 @@ if(plik.is_open())
         cout << endl;
 	}
 
-
+plik.close();
     return 0;
 }
 
