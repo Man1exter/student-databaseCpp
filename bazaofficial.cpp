@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <cctype>
-#include <iterator>
+#include <iterator> // wskaznik na okreslony element vectora
 
 using namespace std;
 
@@ -27,10 +27,24 @@ struct Osoba{
     }
 };
 
+void ograniczenie(int &liczbaMax){
+cout << "Ilu studentow chcesz dodac(nie wiecej niz 20)?" << endl;
+cin >> liczbaMax;
+
+if(liczbaMax > 20 ){
+    cout << endl;
+    cout << "nie moze byc wieksza niz 20!" << endl;
+    cout << "popraw sie: " << endl;
+    cin >> liczbaMax;
+}
+}
 
 int main(){
 
+vector <Osoba> studenci(20);
+int liczbaMax;
 
+ograniczenie(liczbaMax);
 
     return 0;
 }
