@@ -31,13 +31,7 @@ struct Osoba{
     }
 };
 
-
-
-
-
 int main(){
-
-
 
 fstream plik;   
 
