@@ -1,7 +1,9 @@
 #include <iostream>
-#include <iostream>
-#include <iostream>
-#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cctype>
+#include <iterator>
 
 using namespace std;
 
