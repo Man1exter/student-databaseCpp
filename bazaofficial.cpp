@@ -47,6 +47,18 @@ void dodawanie(int liczbaMax){
 for(i = 1; i < liczbaMax + 1; i++){
     cout << "podaj imie " << i << " studenta:"<< endl;
     cin >> studenci[i].imie;
+
+    cout << "podaj nazwisko " << i << " studenta:"<< endl;
+    cin >> studenci[i].nazwisko;
+
+    cout << "podaj numer albumu " << i << " studenta:"<< endl;
+    cin >> studenci[i].nrAlbumu;
+
+    cout << "podaj srednia ocen " << i << " studenta:"<< endl;
+    cin >> studenci[i].srOcen;
+
+    cout << "podaj wiek " << i << " studenta:"<< endl;
+    cin >> studenci[i].wiek;
 }
 }
 
