@@ -79,12 +79,13 @@ int liczbaMax;
 ograniczenie(liczbaMax);
 dodawanieAll(liczbaMax);
 
+int wybor;
 
 char key = getch();
 int value = key;
 int nowe;
 
-while(value != KEY_X){
+while(value != KEY_X){ // x - wyjscie z petli calkowicie
     switch(getch()){
         case KEY_L : //listowanie + duza litera calych imion i nazwisk
 
@@ -103,6 +104,17 @@ while(value != KEY_X){
         break;
         
         default: //wyjscie
+        cout << "wychodzisz czy chcesz zobaczyc swoich studentow?  [ 1 - (studenci) / 0 - (wyjscie) ]"  << endl;
+        cin >> wybor;
+
+        if(wybor == 0){
+            cout << "trzymaj sie, milego dnia" << endl;
+            return 0;
+        } else {
+            cout << "Twoja lista studentow: " << endl;
+            // miejsce na funkcje z lista studentow
+        }
+
     }
 }
 
