@@ -39,7 +39,7 @@ if(liczbaMax > 20 ){
 }
 }
 
-void dodawanie(int liczbaMax){
+void dodawanieAll(int liczbaMax){
 
     vector <Osoba> studenci(20);
     int i;
@@ -59,6 +59,11 @@ for(i = 1; i < liczbaMax + 1; i++){
 
     cout << "podaj wiek " << i << " studenta:"<< endl;
     cin >> studenci[i].wiek;
+
+    cout << "Twoi studenci: " << endl;
+    cout << endl;
+
+    
 }
 }
 
@@ -68,7 +73,9 @@ vector <Osoba> studenci(20);
 int liczbaMax;
 
 ograniczenie(liczbaMax);
-dodawanie(liczbaMax);
+dodawanieAll(liczbaMax);
+
+
 
     return 0;
 }
