@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
+#include <stdio.h>
 #include <vector>
+#include <conio.h>
 #include <algorithm>
 #include <cctype>
 #include <iterator> // wskaznik na okreslony element vectora
@@ -76,6 +78,36 @@ int liczbaMax;
 
 ograniczenie(liczbaMax);
 dodawanieAll(liczbaMax);
+
+
+char key = getch();
+int value = key;
+int nowe;
+
+while(value != KEY_X){
+    switch(getch()){
+        case KEY_L : //listowanie + duza litera calych imion i nazwisk
+
+        break;
+
+        case KEY_D : //dodawanie ucznia > 20 uczniow w grupie/ na liscie
+
+        break;
+
+        case KEY_U : //usuniecie studenta ze srocen 2.5 lub mniej
+
+        break;
+
+        case KEY_K : //zapis aktualnego stanu
+
+        break;
+        
+        default: //wyjscie
+    }
+}
+
+key = getch();
+value = key;
 
 
 
