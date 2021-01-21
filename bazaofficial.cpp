@@ -112,7 +112,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
             return 0;
         } else {
             cout << "Twoja lista studentow: " << endl;
-            // miejsce na funkcje z lista studentow
+            // miejsce na funkcje z lista studentow ( pokazanie jej )
         }
 
     }
