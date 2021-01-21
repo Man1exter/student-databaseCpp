@@ -41,35 +41,9 @@ if(liczbaMax > 20 ){
 }
 }
 
-void dodawanieAll(int liczbaMax){
+void dodawanieAll(int liczbaMax, vector<Osoba>&);
 
-    vector <Osoba> studenci(20);
-    int i;
-
-for(i = 1; i < liczbaMax + 1; i++){
-    cout << "podaj imie " << i << " studenta:"<< endl;
-    cin >> studenci[i].imie;
-
-    cout << "podaj nazwisko " << i << " studenta:"<< endl;
-    cin >> studenci[i].nazwisko;
-
-    cout << "podaj numer albumu " << i << " studenta:"<< endl;
-    cin >> studenci[i].nrAlbumu;
-
-    cout << "podaj srednia ocen " << i << " studenta:"<< endl;
-    cin >> studenci[i].srOcen;
-
-    cout << "podaj wiek " << i << " studenta:"<< endl;
-    cin >> studenci[i].wiek;
-
-    cout << "Twoi studenci: " << endl;
-    cout << endl;
-
-}
-for(int i = 1; i < liczbaMax + 1; i++){   
-cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
-}
-}
+    
 
 int main(){
 
@@ -77,8 +51,7 @@ vector <Osoba> studenci(20);
 int liczbaMax;
 
 ograniczenie(liczbaMax);
-dodawanieAll(liczbaMax);
-
+dodawanieAll(liczbaMax, studenci);
 int wybor;
 
 char key = getch();
@@ -112,8 +85,11 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
             return 0;
         } else {
             cout << "Twoja lista studentow: " << endl;
-            // miejsce na funkcje z lista studentow ( pokazanie jej )
-        }
+
+            for(int i = 1; i < liczbaMax + 1; i++){   
+            cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
+           }
+       }
 
     }
 }
@@ -125,3 +101,35 @@ value = key;
 
     return 0;
 }
+
+void dodawanieAll(int liczbaMax, vector<Osoba>& wygenerowane){
+
+    int i;
+
+    for(i = 1; i < liczbaMax + 1; i++){
+    cout << "podaj imie " << i << " studenta:"<< endl;
+    cin >> wygenerowane[i].imie;
+
+    cout << "podaj nazwisko " << i << " studenta:"<< endl;
+    cin >> wygenerowane[i].nazwisko;
+
+    cout << "podaj numer albumu " << i << " studenta:"<< endl;
+    cin >> wygenerowane[i].nrAlbumu;
+
+    cout << "podaj srednia ocen " << i << " studenta:"<< endl;
+    cin >> wygenerowane[i].srOcen;
+
+    cout << "podaj wiek " << i << " studenta:"<< endl;
+    cin >> wygenerowane[i].wiek;
+
+}
+
+    cout << "Twoi studenci: " << endl;
+    cout << endl;
+
+for(int i = 1; i < liczbaMax + 1; i++){   
+cout <<"Studenci: "<< wygenerowane[i].imie <<" "<< wygenerowane[i].nazwisko <<" ma lat "<< wygenerowane[i].wiek <<" numer albumu: "<< wygenerowane[i].nrAlbumu <<" oraz srednia ocen to: "<< wygenerowane[i].srOcen << endl;
+
+}
+}
+
