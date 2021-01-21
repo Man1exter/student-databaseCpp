@@ -63,7 +63,9 @@ for(i = 1; i < liczbaMax + 1; i++){
     cout << "Twoi studenci: " << endl;
     cout << endl;
 
-    
+}
+for(int i = 1; i < liczbaMax + 1; i++){   
+cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
 }
 }
 
