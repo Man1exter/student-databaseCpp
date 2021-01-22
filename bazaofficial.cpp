@@ -151,10 +151,16 @@ cout <<"Studenci: "<< wygenerowane[i].imie <<" "<< wygenerowane[i].nazwisko <<" 
 void usuwanie(int liczbaMax, vector<Osoba> studenci){
     int i;
 
+for(int i = 1; i < liczbaMax + 1; i++){   
+
     if(studenci[i].srOcen <= 2.5){
         cout << "usuniesz studenta ze srednia mniejsza lub rowna 2.5" << endl;
 
+        cout << endl;
+
         cout <<"Student: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
+        
+        cout << endl;
         
         studenci.erase(studenci.begin() + 1);
 
@@ -164,5 +170,6 @@ void usuwanie(int liczbaMax, vector<Osoba> studenci){
         cout << "nie znaleziono studenta ze srednia ocen mniejsza lub rowna 2.5" << endl;
     }
     
+   }
  }
 
