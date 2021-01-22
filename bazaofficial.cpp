@@ -53,7 +53,7 @@ void menu(){
  }
 
 void dodawanieAll(int liczbaMax, vector<Osoba>&);
-void usuwanie(int liczbaMax, vector<Osoba>);
+void usuwanie(int liczbaMax, vector<Osoba>&);
 
     
 
@@ -148,7 +148,7 @@ cout <<"Studenci: "<< wygenerowane[i].imie <<" "<< wygenerowane[i].nazwisko <<" 
 
 
 
-void usuwanie(int liczbaMax, vector<Osoba> studenci){
+void usuwanie(int liczbaMax, vector<Osoba>& studenci){
     int i;
 
 for(int i = 1; i < liczbaMax + 1; i++){   
@@ -159,10 +159,10 @@ for(int i = 1; i < liczbaMax + 1; i++){
         cout << endl;
 
         cout <<"Student: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
-        
+
         cout << endl;
         
-        studenci.erase(studenci.begin() + 1);
+        studenci.erase(studenci.begin() + i);
 
         cout << "student zostal usuniety" << endl;
 
