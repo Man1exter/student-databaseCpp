@@ -46,7 +46,7 @@ void menu(){
      cout << "---- U - USUWA STUDENTA ZE SREDNIA <= 2.5" << endl;
      cout << "---- L - LISTUJE NAZWISKA" << endl;
      cout << "---- K - ZAPISUJE AKTUALNY STAN" << endl;
-     cout << "---- U - DODAJE NOWEGO STUDENTA" << endl;
+     cout << "---- D - DODAJE NOWEGO STUDENTA" << endl;
      cout << "---- X - WYCHODZI CALKOWICIE Z PETLI" << endl;
      cout << "---- NP. Q - PRZECHODZI DO WYJSCIA" << endl;
      cout << "---------------------------------------" << endl;
@@ -54,6 +54,7 @@ void menu(){
 
 void dodawanieAll(int liczbaMax, vector<Osoba>&);
 void usuwanie(int liczbaMax, vector<Osoba>&);
+void dodawanieNowego(int &liczbaMaxNowych, vector<Osoba>&);
 
     
 
@@ -61,6 +62,7 @@ int main(){
 
 vector <Osoba> studenci(20);
 int liczbaMax;
+int liczbaMaxNowych;
 
 ograniczenie(liczbaMax);
 dodawanieAll(liczbaMax, studenci);
@@ -78,7 +80,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         break;
 
         case KEY_D : //dodawanie ucznia > 20 uczniow w grupie/ na liscie
-
+        dodawanieNowego(liczbaMaxNowych, studenci);
         break;
 
         case KEY_U : //usuniecie studenta ze srocen 2.5 lub mniej
@@ -173,3 +175,15 @@ for(int i = 1; i < liczbaMax + 1; i++){
    }
  }
 
+void dodawanieNowego(int &liczbaMaxNowych, vector<Osoba>& studenci){
+
+cout << "Ilu nowych studentow chcesz dodac(nie wiecej niz 20)?" << endl;
+cin >> liczbaMaxNowych;
+
+if(liczbaMaxNowych > 20 ){
+    cout << endl;
+    cout << "nie moze byc wieksza niz 20!" << endl;
+    cout << "popraw sie: " << endl;
+    cin >> liczbaMaxNowych;
+}
+}
