@@ -191,19 +191,19 @@ int i;
 
     for(i = 1; i < liczbaMaxNowych + 1; i++){
     cout << "podaj imie " << i << " nowego studenta:"<< endl;
-    cin >> wygenerowane[i].imie;
+    cin >> studenci[i].imie;
 
     cout << "podaj nazwisko " << i << " nowego studenta:"<< endl;
-    cin >> wygenerowane[i].nazwisko;
+    cin >> studenci[i].nazwisko;
 
     cout << "podaj numer albumu " << i << " nowego studenta:"<< endl;
-    cin >> wygenerowane[i].nrAlbumu;
+    cin >> studenci[i].nrAlbumu;
 
     cout << "podaj srednia ocen " << i << " nowego studenta:"<< endl;
-    cin >> wygenerowane[i].srOcen;
+    cin >> studenci[i].srOcen;
 
     cout << "podaj wiek " << i << " nowego studenta:"<< endl;
-    cin >> wygenerowane[i].wiek;
+    cin >> studenci[i].wiek;
 
 }
 
@@ -211,7 +211,7 @@ int i;
     cout << endl;
 
     for(int i = 1; i < liczbaMaxNowych + 1; i++){   
-    cout <<"Studenci: "<< wygenerowane[i].imie <<" "<< wygenerowane[i].nazwisko <<" ma lat "<< wygenerowane[i].wiek <<" numer albumu: "<< wygenerowane[i].nrAlbumu <<" oraz srednia ocen to: "<< wygenerowane[i].srOcen << endl;
+    cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
 
 } 
 }
