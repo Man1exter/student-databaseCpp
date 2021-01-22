@@ -42,6 +42,7 @@ if(liczbaMax > 20 ){
 }
 
 void dodawanieAll(int liczbaMax, vector<Osoba>&);
+void usuwanie(int liczbaMax, vector<Osoba>);
 
     
 
@@ -69,7 +70,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         break;
 
         case KEY_U : //usuniecie studenta ze srocen 2.5 lub mniej
-
+        usuwanie(liczbaMax, studenci);
         break;
 
         case KEY_K : //zapis aktualnego stanu
@@ -133,3 +134,13 @@ cout <<"Studenci: "<< wygenerowane[i].imie <<" "<< wygenerowane[i].nazwisko <<" 
 }
 }
 
+
+
+void usuwanie(int liczbaMax, vector<Osoba> studenci){
+    int i;
+
+        for(int i = 1; i < liczbaMax + 1; i++){   
+        cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
+    }
+    
+ }
