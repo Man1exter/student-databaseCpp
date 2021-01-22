@@ -186,4 +186,32 @@ if(liczbaMaxNowych > 20 ){
     cout << "popraw sie: " << endl;
     cin >> liczbaMaxNowych;
 }
+
+int i;
+
+    for(i = 1; i < liczbaMaxNowych + 1; i++){
+    cout << "podaj imie " << i << " nowego studenta:"<< endl;
+    cin >> wygenerowane[i].imie;
+
+    cout << "podaj nazwisko " << i << " nowego studenta:"<< endl;
+    cin >> wygenerowane[i].nazwisko;
+
+    cout << "podaj numer albumu " << i << " nowego studenta:"<< endl;
+    cin >> wygenerowane[i].nrAlbumu;
+
+    cout << "podaj srednia ocen " << i << " nowego studenta:"<< endl;
+    cin >> wygenerowane[i].srOcen;
+
+    cout << "podaj wiek " << i << " nowego studenta:"<< endl;
+    cin >> wygenerowane[i].wiek;
+
+}
+
+    cout << "Twoi nowi studenci: " << endl;
+    cout << endl;
+
+    for(int i = 1; i < liczbaMaxNowych + 1; i++){   
+    cout <<"Studenci: "<< wygenerowane[i].imie <<" "<< wygenerowane[i].nazwisko <<" ma lat "<< wygenerowane[i].wiek <<" numer albumu: "<< wygenerowane[i].nrAlbumu <<" oraz srednia ocen to: "<< wygenerowane[i].srOcen << endl;
+
+} 
 }
