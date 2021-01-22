@@ -42,12 +42,14 @@ if(liczbaMax > 20 ){
 }
 
 void menu(){
-     cout << "U - USUWA STUDENTA ZE SREDNIA <= 2.5" << endl;
-     cout << "L - LISTUJE NAZWISKA" << endl;
-     cout << "K - ZAPISUJE AKTUALNY STAN" << endl;
-     cout << "U - DODAJE NOWEGO STUDENTA" << endl;
-     cout << "X - WYCHODZI CALKOWICIE Z PETLI" << endl;
-     cout << "NP. Q - PRZECHODZI DO WYJSCIA" << endl;
+     cout << "---------------------------------------" << endl;
+     cout << "---- U - USUWA STUDENTA ZE SREDNIA <= 2.5" << endl;
+     cout << "---- L - LISTUJE NAZWISKA" << endl;
+     cout << "---- K - ZAPISUJE AKTUALNY STAN" << endl;
+     cout << "---- U - DODAJE NOWEGO STUDENTA" << endl;
+     cout << "---- X - WYCHODZI CALKOWICIE Z PETLI" << endl;
+     cout << "---- NP. Q - PRZECHODZI DO WYJSCIA" << endl;
+     cout << "---------------------------------------" << endl;
  }
 
 void dodawanieAll(int liczbaMax, vector<Osoba>&);
