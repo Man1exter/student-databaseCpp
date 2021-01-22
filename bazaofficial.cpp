@@ -54,7 +54,7 @@ void menu(){
 
 void dodawanieAll(int liczbaMax, vector<Osoba>&);
 void usuwanie(int liczbaMax, vector<Osoba>&);
-void dodawanieNowego(int &liczbaMaxNowych, vector<Osoba>&);
+void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>&);
 
     
 
@@ -80,7 +80,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         break;
 
         case KEY_D : //dodawanie ucznia > 20 uczniow w grupie/ na liscie
-        dodawanieNowego(liczbaMaxNowych, studenci);
+        dodawanieNowego(liczbaMax,liczbaMaxNowych, studenci);
         break;
 
         case KEY_U : //usuniecie studenta ze srocen 2.5 lub mniej
@@ -101,7 +101,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         } else {
             cout << "Twoja lista studentow: " << endl;
 
-            for(int i = 1; i < liczbaMax + 1; i++){   
+            for(int i = 1; i < liczbaMax + liczbaMaxNowych + 1; i++){   
             cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
            }
        }
@@ -175,7 +175,7 @@ for(int i = 1; i < liczbaMax + 1; i++){
    }
  }
 
-void dodawanieNowego(int &liczbaMaxNowych, vector<Osoba>& studenci){
+void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>& dodawanyNowy){
 
 cout << "Ilu nowych studentow chcesz dodac(nie wiecej niz 20)?" << endl;
 cin >> liczbaMaxNowych;
@@ -191,27 +191,28 @@ int i;
 
     for(i = 1; i < liczbaMaxNowych + 1; i++){
     cout << "podaj imie " << i << " nowego studenta:"<< endl;
-    cin >> studenci[i].imie;
+    cin >> dodawanyNowy[i].imie;
 
     cout << "podaj nazwisko " << i << " nowego studenta:"<< endl;
-    cin >> studenci[i].nazwisko;
+    cin >> dodawanyNowy[i].nazwisko;
 
     cout << "podaj numer albumu " << i << " nowego studenta:"<< endl;
-    cin >> studenci[i].nrAlbumu;
+    cin >> dodawanyNowy[i].nrAlbumu;
 
     cout << "podaj srednia ocen " << i << " nowego studenta:"<< endl;
-    cin >> studenci[i].srOcen;
+    cin >> dodawanyNowy[i].srOcen;
 
     cout << "podaj wiek " << i << " nowego studenta:"<< endl;
-    cin >> studenci[i].wiek;
+    cin >> dodawanyNowy[i].wiek;
 
 }
+    dodawanyNowy.insert(dodawanyNowy.begin()+1,dodawanyNowy[i]);
 
     cout << "Twoi nowi studenci: " << endl;
     cout << endl;
 
     for(int i = 1; i < liczbaMaxNowych + 1; i++){   
-    cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
+    cout <<"Studenci: "<< dodawanyNowy[i].imie <<" "<< dodawanyNowy[i].nazwisko <<" ma lat "<< dodawanyNowy[i].wiek <<" numer albumu: "<< dodawanyNowy[i].nrAlbumu <<" oraz srednia ocen to: "<< dodawanyNowy[i].srOcen << endl;
 
 } 
 }
