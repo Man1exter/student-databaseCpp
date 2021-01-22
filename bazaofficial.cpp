@@ -41,6 +41,15 @@ if(liczbaMax > 20 ){
 }
 }
 
+void menu(){
+     cout << "U - USUWA STUDENTA ZE SREDNIA <= 2.5" << endl;
+     cout << "L - LISTUJE NAZWISKA" << endl;
+     cout << "K - ZAPISUJE AKTUALNY STAN" << endl;
+     cout << "U - DODAJE NOWEGO STUDENTA" << endl;
+     cout << "X - WYCHODZI CALKOWICIE Z PETLI" << endl;
+     cout << "NP. Q - PRZECHODZI DO WYJSCIA" << endl;
+ }
+
 void dodawanieAll(int liczbaMax, vector<Osoba>&);
 void usuwanie(int liczbaMax, vector<Osoba>);
 
@@ -53,6 +62,7 @@ int liczbaMax;
 
 ograniczenie(liczbaMax);
 dodawanieAll(liczbaMax, studenci);
+menu();
 int wybor;
 
 char key = getch();
@@ -139,8 +149,18 @@ cout <<"Studenci: "<< wygenerowane[i].imie <<" "<< wygenerowane[i].nazwisko <<" 
 void usuwanie(int liczbaMax, vector<Osoba> studenci){
     int i;
 
-        for(int i = 1; i < liczbaMax + 1; i++){   
-        cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
+    if(studenci[i].srOcen <= 2.5){
+        cout << "usuniesz studenta ze srednia mniejsza lub rowna 2.5" << endl;
+
+        cout <<"Student: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
+        
+        studenci.erase(studenci.begin() + 1);
+
+        cout << "student zostal usuniety" << endl;
+
+    } else {
+        cout << "nie znaleziono studenta ze srednia ocen mniejsza lub rowna 2.5" << endl;
     }
     
  }
+
