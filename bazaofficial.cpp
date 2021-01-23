@@ -189,30 +189,24 @@ if(liczbaMaxNowych > 20 ){
 
 int i;
 
-    for(i = 1; i < liczbaMaxNowych + 1; i++){
-    cout << "podaj imie " << i << " nowego studenta:"<< endl;
+    for(i = 1 + liczbaMax; i < liczbaMaxNowych + 1 + liczbaMax; i++){
+    cout << "podaj imie " << i - 1 << " nowego studenta:"<< endl;
     cin >> dodawanyNowy[i].imie;
 
-    cout << "podaj nazwisko " << i << " nowego studenta:"<< endl;
+    cout << "podaj nazwisko " << i - 1  << " nowego studenta:"<< endl;
     cin >> dodawanyNowy[i].nazwisko;
 
-    cout << "podaj numer albumu " << i << " nowego studenta:"<< endl;
+    cout << "podaj numer albumu " << i - 1 << " nowego studenta:"<< endl;
     cin >> dodawanyNowy[i].nrAlbumu;
 
-    cout << "podaj srednia ocen " << i << " nowego studenta:"<< endl;
+    cout << "podaj srednia ocen " << i - 1 << " nowego studenta:"<< endl;
     cin >> dodawanyNowy[i].srOcen;
 
-    cout << "podaj wiek " << i << " nowego studenta:"<< endl;
+    cout << "podaj wiek " << i - 1 << " nowego studenta:"<< endl;
     cin >> dodawanyNowy[i].wiek;
 
 }
-    dodawanyNowy.insert(dodawanyNowy.begin()+1,dodawanyNowy[i]);
+    // dodawanyNowy.insert( dodawanyNowy.begin() + 5, dodawanyNowy[i]);
 
-    cout << "Twoi nowi studenci: " << endl;
-    cout << endl;
-
-    for(int i = 1; i < liczbaMaxNowych + 1; i++){   
-    cout <<"Studenci: "<< dodawanyNowy[i].imie <<" "<< dodawanyNowy[i].nazwisko <<" ma lat "<< dodawanyNowy[i].wiek <<" numer albumu: "<< dodawanyNowy[i].nrAlbumu <<" oraz srednia ocen to: "<< dodawanyNowy[i].srOcen << endl;
-
-} 
+   cout << "nowy student / studenci zostali dodani do bazy studentow!" << endl;
 }
