@@ -190,23 +190,24 @@ if(liczbaMaxNowych > 20 ){
 int i;
 
     for(i = 1 + liczbaMax; i < liczbaMaxNowych + 1 + liczbaMax; i++){
-    cout << "podaj imie " << i - 1 << " nowego studenta:"<< endl;
+    cout << "podaj imie " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> dodawanyNowy[i].imie;
 
-    cout << "podaj nazwisko " << i - 1  << " nowego studenta:"<< endl;
+    cout << "podaj nazwisko " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> dodawanyNowy[i].nazwisko;
 
-    cout << "podaj numer albumu " << i - 1 << " nowego studenta:"<< endl;
+    cout << "podaj numer albumu " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> dodawanyNowy[i].nrAlbumu;
 
-    cout << "podaj srednia ocen " << i - 1 << " nowego studenta:"<< endl;
+    cout << "podaj srednia ocen " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> dodawanyNowy[i].srOcen;
 
-    cout << "podaj wiek " << i - 1 << " nowego studenta:"<< endl;
+    cout << "podaj wiek " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> dodawanyNowy[i].wiek;
 
 }
     // dodawanyNowy.insert( dodawanyNowy.begin() + 5, dodawanyNowy[i]);
 
-   cout << "nowy student / studenci zostali dodani do bazy studentow!" << endl;
+   cout << "nowy student / studenci zostal / zostali dodani do bazy studentow!" << endl;
+   cout << "wrociles do petli - menu, po zakonczeniu tego switcha" << endl;
 }
