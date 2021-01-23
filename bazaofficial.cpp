@@ -87,7 +87,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         usuwanie(liczbaMax, studenci);
         break;
 
-        case KEY_K : //zapis aktualnego stanu
+        case KEY_K : //zapis aktualnego stanu - do pliku + zakonczenie programu
 
         break;
         
