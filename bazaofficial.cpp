@@ -45,7 +45,7 @@ void menu(){
      cout << "---------------------------------------" << endl;
      cout << "---- U - USUWA STUDENTA ZE SREDNIA <= 2.5" << endl;
      cout << "---- L - LISTUJE NAZWISKA" << endl;
-     cout << "---- K - ZAPISUJE AKTUALNY STAN" << endl;
+     cout << "---- K - ZAPISUJE AKTUALNY STAN I WYCHODZI Z PROGRAMU" << endl;
      cout << "---- D - DODAJE NOWEGO STUDENTA" << endl;
      cout << "---- X - WYCHODZI CALKOWICIE Z PETLI" << endl;
      cout << "---- NP. Q - PRZECHODZI DO WYJSCIA" << endl;
