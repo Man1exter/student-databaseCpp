@@ -215,13 +215,11 @@ int i;
 
 void sortowanieStudentow(int liczbaMax, int liczbaMaxNowych, vector<Osoba>& sortowani){
 
-    sort(sortowani.begin(), sortowani.begin()+4);
-
+    sort(sortowani.begin(), sortowani.begin());
 
     cout << endl;
     for(int i = 1; i < liczbaMax + liczbaMaxNowych + 1; i++){   
     cout <<"Studenci po sortowaniu: "<< sortowani[i].imie <<" "<< sortowani[i].nazwisko <<" ma lat "<< sortowani[i].wiek <<" numer albumu: "<< sortowani[i].nrAlbumu <<" oraz srednia ocen to: "<< sortowani[i].srOcen << endl;
     }
     cout << endl;
-
 }
