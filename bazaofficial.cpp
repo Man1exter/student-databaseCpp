@@ -55,6 +55,7 @@ void menu(){
 void dodawanieAll(int liczbaMax, vector<Osoba>&);
 void usuwanie(int liczbaMax, vector<Osoba>&);
 void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>&);
+void sortowanieStudentow(int liczbaMax,int liczbaMaxNowych, vector<Osoba>&);
 
     
 
@@ -76,7 +77,7 @@ int nowe;
 while(value != KEY_X){ // x - wyjscie z petli calkowicie
     switch(getch()){
         case KEY_L : //listowanie + duza litera calych imion i nazwisk
-
+        sortowanieStudentow(liczbaMax, liczbaMaxNowych, studenci);
         break;
 
         case KEY_D : //dodawanie ucznia > 20 uczniow w grupie/ na liscie
@@ -210,4 +211,14 @@ int i;
 
    cout << "nowy student / studenci zostal / zostali dodani do bazy studentow!" << endl;
    cout << "wrociles do petli - menu, po zakonczeniu tego switcha" << endl;
+}
+
+void sortowanieStudentow(int liczbaMax, int liczbaMaxNowych, vector<Osoba>& sortowani){
+
+    sort(sortowani.begin(), sortowani.begin()+4);
+
+    for(int i = 1; i < liczbaMax + liczbaMaxNowych + 1; i++){   
+    cout <<"Studenci po sortowaniu: "<< sortowani[i].imie <<" "<< sortowani[i].nazwisko <<" ma lat "<< sortowani[i].wiek <<" numer albumu: "<< sortowani[i].nrAlbumu <<" oraz srednia ocen to: "<< sortowani[i].srOcen << endl;
+    }
+
 }
