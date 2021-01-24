@@ -94,13 +94,13 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         break;
 
         case KEY_K : //zapis aktualnego stanu - do pliku + zakonczenie programu
-
+         // zapis do pliku
         break;
         
         default: //wyjscie
              cout << "wychodzisz czy chcesz zobaczyc swoich studentow?  [ 1 - (studenci) / 0 - (wyjscie) ]"  << endl;
         cin >> wybor;
-
+         // odczyt z pliku
         if(wybor == 0){
             cout << "trzymaj sie, milego dnia" << endl;
             return 0;
