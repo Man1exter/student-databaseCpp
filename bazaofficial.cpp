@@ -57,13 +57,13 @@ void dodawanieAll(int liczbaMax, vector<Osoba>&);
 void usuwanie(int liczbaMax, vector<Osoba>&);
 void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>&);
 void sortowanieStudentow(int liczbaMax,int liczbaMaxNowych, vector<Osoba>&);
+void zapisDoPliku(int liczbaMax, int liczbaMaxNowych,vector<Osoba> studenci);
 
     
 
 int main(){
 
     fstream plikBazy;
-    plikBazy.open( "base.txt", ios::out | ios::app);
 
 vector <Osoba> studenci(20);
 int liczbaMax;
@@ -94,7 +94,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         break;
 
         case KEY_K : //zapis aktualnego stanu - do pliku + zakonczenie programu
-         // zapis do pliku
+        zapisDoPliku(liczbaMax,liczbaMaxNowych,studenci);
         break;
         
         default: //wyjscie
@@ -111,34 +111,30 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
             cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
            }
        }
+       plikBazy.open( "base.txt", ios::in );
 
-    }
-}
-
-key = getch();
-value = key;
-
-
-plikBazy.close();
-
-plikBazy.open( "base.txt", ios::in );
-
-if(plikBazy.is_open())
-	{
+        if(plikBazy.is_open())
+	    {
         cout << "Aktualna lista studentow wyglada nastepujaco: " << endl;
         cout << endl;
 
-		char wiersz[10000];
+		char wiersz[1000];
 
-		while(plikBazy.getline(wiersz,10000)) 
+		while(plikBazy.getline(wiersz,1000)) 
 		{
 			cout<< wiersz << endl;
 			
 		}
         cout << endl;
-	}
+	    }
 
-plikBazy.close();
+       plikBazy.close();
+       return 0;
+    }
+}
+
+key = getch();
+value = key;
 
     return 0;
 }
@@ -247,4 +243,17 @@ void sortowanieStudentow(int liczbaMax, int liczbaMaxNowych, vector<Osoba>& sort
     cout <<"Studenci po sortowaniu: "<< sortowani[i].imie <<" "<< sortowani[i].nazwisko <<" ma lat "<< sortowani[i].wiek <<" numer albumu: "<< sortowani[i].nrAlbumu <<" oraz srednia ocen to: "<< sortowani[i].srOcen << endl;
     }
     cout << endl;
+}
+
+void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
+
+    fstream plikBazy;
+    plikBazy.open( "base.txt", ios::out | ios::app);
+
+    for(int i = 1; i < liczbaMax + liczbaMaxNowych + 1; i++){   
+    plikBazy << studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
+    }
+
+    plikBazy.close();
+
 }
