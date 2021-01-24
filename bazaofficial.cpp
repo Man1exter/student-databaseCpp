@@ -68,11 +68,12 @@ int main(){
 vector <Osoba> studenci(20);
 int liczbaMax;
 int liczbaMaxNowych;
+int wybor;
 
 ograniczenie(liczbaMax);
 dodawanieAll(liczbaMax, studenci);
 menu();
-int wybor;
+
 
 char key = getch();
 int value = key;
@@ -97,7 +98,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         break;
         
         default: //wyjscie
-        cout << "wychodzisz czy chcesz zobaczyc swoich studentow?  [ 1 - (studenci) / 0 - (wyjscie) ]"  << endl;
+             cout << "wychodzisz czy chcesz zobaczyc swoich studentow?  [ 1 - (studenci) / 0 - (wyjscie) ]"  << endl;
         cin >> wybor;
 
         if(wybor == 0){
