@@ -5,6 +5,7 @@
 #include <conio.h>
 #include <algorithm>
 #include <cctype>
+#include <fstream>
 #include <iterator> // wskaznik na okreslony element vectora
 
 using namespace std;
@@ -61,7 +62,8 @@ void sortowanieStudentow(int liczbaMax,int liczbaMaxNowych, vector<Osoba>&);
 
 int main(){
 
-    fstream plik;
+    fstream plikBazy;
+    plikBazy.open( "bazastudentow.txt", ios::out | ios::app);
 
 vector <Osoba> studenci(20);
 int liczbaMax;
@@ -115,14 +117,19 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
 key = getch();
 value = key;
 
-if(plik.is_open())
+
+plikBazy.close();
+
+plikBazy.open( "bazastudentow.txt", ios::in );
+
+if(plikBazy.is_open())
 	{
         cout << "Aktualna lista studentow wyglada nastepujaco: " << endl;
         cout << endl;
 
 		char wiersz[10000];
 
-		while(plik.getline(wiersz,10000)) 
+		while(plikBazy.getline(wiersz,10000)) 
 		{
 			cout<< wiersz << endl;
 			
@@ -130,7 +137,7 @@ if(plik.is_open())
         cout << endl;
 	}
 
-plik.close();
+plikBazy.close();
 
     return 0;
 }
