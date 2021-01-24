@@ -65,7 +65,7 @@ int main(){
 
     fstream plikBazy;
 
-vector <Osoba> studenci(20);
+vector <Osoba> studenci(5);
 int liczbaMax;
 int liczbaMaxNowych;
 int wybor;
