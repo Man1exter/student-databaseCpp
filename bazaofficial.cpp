@@ -63,7 +63,7 @@ void sortowanieStudentow(int liczbaMax,int liczbaMaxNowych, vector<Osoba>&);
 int main(){
 
     fstream plikBazy;
-    plikBazy.open( "bazastudentow.txt", ios::out | ios::app);
+    plikBazy.open( "base.txt", ios::out | ios::app);
 
 vector <Osoba> studenci(20);
 int liczbaMax;
@@ -120,7 +120,7 @@ value = key;
 
 plikBazy.close();
 
-plikBazy.open( "bazastudentow.txt", ios::in );
+plikBazy.open( "base.txt", ios::in );
 
 if(plikBazy.is_open())
 	{
