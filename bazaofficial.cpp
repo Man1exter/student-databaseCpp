@@ -113,7 +113,22 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
 key = getch();
 value = key;
 
+if(plik.is_open())
+	{
+        cout << "Aktualna lista studentow wyglada nastepujaco: " << endl;
+        cout << endl;
 
+		char wiersz[10000];
+
+		while(plik.getline(wiersz,10000)) 
+		{
+			cout<< wiersz << endl;
+			
+		}
+        cout << endl;
+	}
+
+plik.close();
 
     return 0;
 }
