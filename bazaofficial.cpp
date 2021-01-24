@@ -61,6 +61,8 @@ void sortowanieStudentow(int liczbaMax,int liczbaMaxNowych, vector<Osoba>&);
 
 int main(){
 
+    fstream plik;
+
 vector <Osoba> studenci(20);
 int liczbaMax;
 int liczbaMaxNowych;
