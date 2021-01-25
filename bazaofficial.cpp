@@ -59,8 +59,6 @@ void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>&);
 void sortowanieStudentow(int liczbaMax,int liczbaMaxNowych, vector<Osoba>&);
 void zapisDoPliku(int liczbaMax, int liczbaMaxNowych,vector<Osoba> studenci);
 
-    
-
 int main(){
 
     fstream plikBazy;
@@ -73,7 +71,6 @@ int wybor;
 ograniczenie(liczbaMax);
 dodawanieAll(liczbaMax, studenci);
 menu();
-
 
 char key = getch();
 int value = key;
@@ -158,7 +155,6 @@ void dodawanieAll(int liczbaMax, vector<Osoba>& wygenerowane){
 
     cout << "podaj wiek " << i << " studenta:"<< endl;
     cin >> wygenerowane[i].wiek;
-
 }
 
     cout << "Twoi studenci: " << endl;
@@ -169,8 +165,6 @@ cout <<"Studenci: "<< wygenerowane[i].imie <<" "<< wygenerowane[i].nazwisko <<" 
 
 }
 }
-
-
 
 void usuwanie(int liczbaMax, vector<Osoba>& studenci){
     int i;
@@ -193,7 +187,6 @@ for(int i = 1; i < liczbaMax + 1; i++){
     } else {
         cout << "nie znaleziono studenta ze srednia ocen mniejsza lub rowna 2.5" << endl;
     }
-    
    }
  }
 
@@ -255,5 +248,4 @@ void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
     }
 
     plikBazy.close();
-
 }
