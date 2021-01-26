@@ -63,14 +63,14 @@ int main(){
 
     fstream plikBazy;
 
-vector <Osoba> studenci(5);
+vector <Osoba> studenci(5); // 5 - jako ilosc indexow w kontenerze
 int liczbaMax;
 int liczbaMaxNowych;
 int wybor;
 
 ograniczenie(liczbaMax);
 dodawanieAll(liczbaMax, studenci);
-menu();
+menu(); // bez paramaetrowy void z prostym menu
 
 char key = getch();
 int value = key;
