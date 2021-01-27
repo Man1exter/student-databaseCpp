@@ -57,7 +57,8 @@ void dodawanieAll(int liczbaMax, vector<Osoba>&);
 void usuwanie(int liczbaMax, vector<Osoba>&);
 void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>&);
 void sortowanieStudentow(int liczbaMax,int liczbaMaxNowych, vector<Osoba>&);
-void zapisDoPliku(int liczbaMax, int liczbaMaxNowych,vector<Osoba> studenci);
+void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci);
+void odczytPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci);
 
 int main(){
 
@@ -95,39 +96,15 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         break;
         
         default: //wyjscie
-             cout << "wychodzisz czy chcesz zobaczyc swoich studentow?  [ 1 - (studenci) / 0 - (wyjscie) ]"  << endl;
+        cout << "wychodzisz czy chcesz zobaczyc swoich studentow?  [ 1 - (studenci) / 0 - (wyjscie) ]"  << endl;
         cin >> wybor;
          // odczyt z pliku
         if(wybor == 0){
             cout << "trzymaj sie, milego dnia" << endl;
             return 0;
         } else {
-            cout << "Twoja lista studentow: " << endl;
-
-            for(int i = 1; i < liczbaMax + liczbaMaxNowych + 1; i++){   
-            cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
-           }
+            odczytPliku(liczbaMax,liczbaMaxNowych,studenci);
        }
-
-       plikBazy.open( "base.txt", ios::in );
-
-        if(plikBazy.is_open())
-	    {
-        cout << "Aktualna lista studentow wyglada nastepujaco: " << endl;
-        cout << endl;
-
-		char wiersz[1000];
-
-		while(plikBazy.getline(wiersz,1000)) 
-		{
-			cout<< wiersz << endl;
-			
-		}
-        cout << endl;
-	    }
-
-       plikBazy.close();
-       return 0;
     }
 }
 
@@ -249,4 +226,32 @@ void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
     }
 
     plikBazy.close();
+}
+void odczytPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
+
+    fstream plikBazy;
+
+    cout << "Twoja lista studentow: " << endl;
+
+         plikBazy.open( "base.txt", ios::in );
+
+        if(plikBazy.is_open())
+	    {
+            fstream plikBazy;
+        cout << "Aktualna lista studentow wyglada nastepujaco: " << endl;
+        cout << endl;
+
+		char wiersz[1000];
+
+		while(plikBazy.getline(wiersz,1000)) 
+		{
+			cout<< wiersz << endl;
+			
+		}
+        cout << endl;
+	    }
+
+       plikBazy.close();
+       return;
+
 }
