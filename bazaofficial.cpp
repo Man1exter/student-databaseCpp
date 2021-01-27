@@ -140,7 +140,6 @@ void dodawanieAll(int liczbaMax, vector<Osoba>& wygenerowane){
 
 for(int i = 1; i < liczbaMax + 1; i++){   
 cout <<"Studenci: "<< wygenerowane[i].imie <<" "<< wygenerowane[i].nazwisko <<" ma lat "<< wygenerowane[i].wiek <<" numer albumu: "<< wygenerowane[i].nrAlbumu <<" oraz srednia ocen to: "<< wygenerowane[i].srOcen << endl;
-
 }
 }
 
@@ -166,6 +165,7 @@ for(int i = 1; i < liczbaMax + 1; i++){
         cout << "nie znaleziono studenta ze srednia ocen mniejsza lub rowna 2.5" << endl;
     }
    }
+   return;
  }
 
 void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>& dodawanyNowy){
@@ -214,14 +214,15 @@ void sortowanieStudentow(int liczbaMax, int liczbaMaxNowych, vector<Osoba>& sort
     cout <<"Studenci po sortowaniu: "<< sortowani[i].imie <<" "<< sortowani[i].nazwisko <<" ma lat "<< sortowani[i].wiek <<" numer albumu: "<< sortowani[i].nrAlbumu <<" oraz srednia ocen to: "<< sortowani[i].srOcen << endl;
     }
     cout << endl;
+    return;
 }
 
 void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
 
-    fstream plikBazy;
+    ofstream plikBazy;
     plikBazy.open( "base.txt", ios::out | ios::app);
 
-    for(int i = 1; i < liczbaMax + liczbaMaxNowych + 1; i++){   
+    for(int i = 1; i < liczbaMax + liczbaMaxNowych; i++){   
     plikBazy << studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
     }
 
@@ -229,15 +230,12 @@ void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
 }
 void odczytPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
 
-    fstream plikBazy;
+    ifstream plikBazy;
 
-    cout << "Twoja lista studentow: " << endl;
-
-         plikBazy.open( "base.txt", ios::in );
+        plikBazy.open( "base.txt", ios::in | ios::app);
 
         if(plikBazy.is_open())
 	    {
-            fstream plikBazy;
         cout << "Aktualna lista studentow wyglada nastepujaco: " << endl;
         cout << endl;
 
@@ -246,12 +244,10 @@ void odczytPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
 		while(plikBazy.getline(wiersz,1000)) 
 		{
 			cout<< wiersz << endl;
-			
 		}
         cout << endl;
 	    }
 
        plikBazy.close();
        return;
-
 }
