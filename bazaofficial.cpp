@@ -63,7 +63,7 @@ int main(){
 
     fstream plikBazy;
 
-vector <Osoba> studenci(5); // 5 - jako ilosc indexow w kontenerze
+vector <Osoba> studenci(20); // liczba - jako ilosc indexow w kontenerze - ograniczenie
 int liczbaMax;
 int liczbaMaxNowych;
 int wybor;
@@ -108,6 +108,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
             cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
            }
        }
+
        plikBazy.open( "base.txt", ios::in );
 
         if(plikBazy.is_open())
