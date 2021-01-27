@@ -63,8 +63,8 @@ void odczytPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci);
 int main(){
 
     fstream plikBazy;
-
 vector <Osoba> studenci(20); // liczba - jako ilosc indexow w kontenerze - ograniczenie
+
 int liczbaMax;
 int liczbaMaxNowych;
 int wybor;
@@ -169,7 +169,9 @@ for(int i = 1; i < liczbaMax + 1; i++){
    return;
  }
 
-void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>& dodawanyNowy){
+void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>& studenci){
+
+    ofstream plikBazy;
 
 cout << "Ilu nowych studentow chcesz dodac(nie wiecej niz 20)?" << endl;
 cin >> liczbaMaxNowych;
@@ -185,25 +187,27 @@ int i;
 
     for(i = 1 + liczbaMax; i < liczbaMaxNowych + 1 + liczbaMax; i++){
     cout << "podaj imie " << i - liczbaMax << " nowego studenta:"<< endl;
-    cin >> dodawanyNowy[i].imie;
+    cin >> studenci[i].imie;
 
     cout << "podaj nazwisko " << i - liczbaMax << " nowego studenta:"<< endl;
-    cin >> dodawanyNowy[i].nazwisko;
+    cin >> studenci[i].nazwisko;
 
     cout << "podaj numer albumu " << i - liczbaMax << " nowego studenta:"<< endl;
-    cin >> dodawanyNowy[i].nrAlbumu;
+    cin >> studenci[i].nrAlbumu;
 
     cout << "podaj srednia ocen " << i - liczbaMax << " nowego studenta:"<< endl;
-    cin >> dodawanyNowy[i].srOcen;
+    cin >> studenci[i].srOcen;
 
     cout << "podaj wiek " << i - liczbaMax << " nowego studenta:"<< endl;
-    cin >> dodawanyNowy[i].wiek;
+    cin >> studenci[i].wiek;
 
 }
-    // dodawanyNowy.insert( dodawanyNowy.begin() + 5, dodawanyNowy[i]);
+
+    studenci.insert( studenci.begin() + 5, studenci[i]);
 
    cout << "nowy student / studenci zostal / zostali dodani do bazy studentow!" << endl;
    cout << "wrociles do petli - menu, po zakonczeniu tego switcha" << endl;
+   return;
 }
 
 void sortowanieStudentow(int liczbaMax, int liczbaMaxNowych, vector<Osoba>& sortowani){
@@ -228,6 +232,8 @@ void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
     }
 
     plikBazy.close();
+    cout << "zapisano!" << endl;
+    return;
 }
 void odczytPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
 
