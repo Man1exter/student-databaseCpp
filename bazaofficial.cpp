@@ -96,6 +96,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         break;
         
         default: //wyjscie
+        cout << "pamietaj o zapisie do pliku klucz kod - K , bo utracisz wszystkie zapisy" << endl;
         cout << "wychodzisz czy chcesz zobaczyc swoich studentow?  [ 1 - (studenci) / 0 - (wyjscie) ]"  << endl;
         cin >> wybor;
          // odczyt z pliku
@@ -114,32 +115,32 @@ value = key;
     return 0;
 }
 
-void dodawanieAll(int liczbaMax, vector<Osoba>& wygenerowane){
+void dodawanieAll(int liczbaMax, vector<Osoba>& studenci){
 
     int i;
 
     for(i = 1; i < liczbaMax + 1; i++){
     cout << "podaj imie " << i << " studenta:"<< endl;
-    cin >> wygenerowane[i].imie;
+    cin >> studenci[i].imie;
 
     cout << "podaj nazwisko " << i << " studenta:"<< endl;
-    cin >> wygenerowane[i].nazwisko;
+    cin >> studenci[i].nazwisko;
 
     cout << "podaj numer albumu " << i << " studenta:"<< endl;
-    cin >> wygenerowane[i].nrAlbumu;
+    cin >> studenci[i].nrAlbumu;
 
     cout << "podaj srednia ocen " << i << " studenta:"<< endl;
-    cin >> wygenerowane[i].srOcen;
+    cin >> studenci[i].srOcen;
 
     cout << "podaj wiek " << i << " studenta:"<< endl;
-    cin >> wygenerowane[i].wiek;
+    cin >> studenci[i].wiek;
 }
 
     cout << "Twoi studenci: " << endl;
     cout << endl;
 
 for(int i = 1; i < liczbaMax + 1; i++){   
-cout <<"Studenci: "<< wygenerowane[i].imie <<" "<< wygenerowane[i].nazwisko <<" ma lat "<< wygenerowane[i].wiek <<" numer albumu: "<< wygenerowane[i].nrAlbumu <<" oraz srednia ocen to: "<< wygenerowane[i].srOcen << endl;
+cout <<"Studenci: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
 }
 }
 
