@@ -203,7 +203,7 @@ int i;
 
 }
 
-    studenci.insert( studenci.begin() + 5, studenci[i]);
+    studenci.push_back(studenci[i]);
 
    cout << "nowy student / studenci zostal / zostali dodani do bazy studentow!" << endl;
    cout << "wrociles do petli - menu, po zakonczeniu tego switcha" << endl;
