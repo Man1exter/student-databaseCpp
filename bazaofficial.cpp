@@ -45,7 +45,7 @@ if(liczbaMax > 20 ){
 void menu(){
      cout << "---------------------------------------" << endl;
      cout << "---- U - USUWA STUDENTA ZE SREDNIA <= 2.5" << endl;
-     cout << "---- L - LISTUJE NAZWISKA" << endl;
+     cout << "---- L - LISTUJE NAZWISKA I SORTUJE" << endl;
      cout << "---- K - ZAPISUJE AKTUALNY STAN I WYCHODZI Z PROGRAMU" << endl;
      cout << "---- D - DODAJE NOWEGO STUDENTA" << endl;
      cout << "---- X - WYCHODZI CALKOWICIE Z PETLI" << endl;
@@ -57,13 +57,13 @@ void dodawanieAll(int liczbaMax, vector<Osoba>&);
 void usuwanie(int liczbaMax, vector<Osoba>&);
 void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>&);
 void sortowanieStudentow(int liczbaMax,int liczbaMaxNowych, vector<Osoba>&);
-void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci);
-void odczytPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci);
+void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba>&);
+void odczytPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba>&);
 
 int main(){
 
     fstream plikBazy;
-vector <Osoba> studenci(20); // liczba - jako ilosc indexow w kontenerze - ograniczenie
+vector<Osoba> studenci(20); 
 
 int liczbaMax;
 int liczbaMaxNowych;
@@ -134,6 +134,7 @@ void dodawanieAll(int liczbaMax, vector<Osoba>& studenci){
 
     cout << "podaj wiek " << i << " studenta:"<< endl;
     cin >> studenci[i].wiek;
+
 }
 
     cout << "Twoi studenci: " << endl;
@@ -171,8 +172,6 @@ for(int i = 1; i < liczbaMax + 1; i++){
 
 void dodawanieNowego(int liczbaMax,int &liczbaMaxNowych, vector<Osoba>& studenci){
 
-    ofstream plikBazy;
-
 cout << "Ilu nowych studentow chcesz dodac(nie wiecej niz 20)?" << endl;
 cin >> liczbaMaxNowych;
 
@@ -188,46 +187,43 @@ int i;
     for(i = 1 + liczbaMax; i < liczbaMaxNowych + 1 + liczbaMax; i++){
     cout << "podaj imie " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> studenci[i].imie;
-
+    
     cout << "podaj nazwisko " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> studenci[i].nazwisko;
-
-    cout << "podaj numer albumu " << i - liczbaMax << " nowego studenta:"<< endl;
+    
+   cout << "podaj numer albumu " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> studenci[i].nrAlbumu;
-
+    
     cout << "podaj srednia ocen " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> studenci[i].srOcen;
-
+    
     cout << "podaj wiek " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> studenci[i].wiek;
-
 }
-
-    studenci.push_back(studenci[i]);
 
    cout << "nowy student / studenci zostal / zostali dodani do bazy studentow!" << endl;
    cout << "wrociles do petli - menu, po zakonczeniu tego switcha" << endl;
    return;
 }
 
-void sortowanieStudentow(int liczbaMax, int liczbaMaxNowych, vector<Osoba>& sortowani){
+void sortowanieStudentow(int liczbaMax, int liczbaMaxNowych, vector<Osoba>& studenci){
 
-    sort(sortowani.begin(), sortowani.begin());
+    sort(studenci.begin(), studenci.begin());
 
     cout << endl;
     for(int i = 1; i < liczbaMax + liczbaMaxNowych + 1; i++){   
-    cout <<"Studenci po sortowaniu: "<< sortowani[i].imie <<" "<< sortowani[i].nazwisko <<" ma lat "<< sortowani[i].wiek <<" numer albumu: "<< sortowani[i].nrAlbumu <<" oraz srednia ocen to: "<< sortowani[i].srOcen << endl;
+    cout <<"Studenci po sortowaniu: "<< studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
     }
     cout << endl;
     return;
 }
 
-void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
+void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba>& studenci){
 
     ofstream plikBazy;
     plikBazy.open( "base.txt", ios::out | ios::app);
 
-    for(int i = 1; i < liczbaMax + liczbaMaxNowych; i++){   
+    for(int i = 1; i < liczbaMax + liczbaMaxNowych + 1; i++){   
     plikBazy << studenci[i].imie <<" "<< studenci[i].nazwisko <<" ma lat "<< studenci[i].wiek <<" numer albumu: "<< studenci[i].nrAlbumu <<" oraz srednia ocen to: "<< studenci[i].srOcen << endl;
     }
 
@@ -235,7 +231,7 @@ void zapisDoPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
     cout << "zapisano!" << endl;
     return;
 }
-void odczytPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba> studenci){
+void odczytPliku(int liczbaMax, int liczbaMaxNowych, vector<Osoba>& studenci){
 
     ifstream plikBazy;
 
