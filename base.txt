@@ -3,3 +3,4 @@ Wierniaczka\ qda ma lat 19 numer albumu: 12 oraz srednia ocen to: 5.5
 Monika Lasko ma lat 22 numer albumu: 1221 oraz srednia ocen to: 4.45
 adam zbirek ma lat 21 numer albumu: 1222222 oraz srednia ocen to: 3.34
 Wolny rybak ma lat 55 numer albumu: 1221 oraz srednia ocen to: 4.45
+michal iwanov ma lat 19 numer albumu: 1221 oraz srednia ocen to: 5.5
