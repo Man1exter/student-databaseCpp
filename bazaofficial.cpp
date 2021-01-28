@@ -208,6 +208,8 @@ int i;
 
 void sortowanieStudentow(int liczbaMax, int liczbaMaxNowych, vector<Osoba>& studenci){
 
+    cout << "Sortowanie studentow!" << endl;
+
     sort(studenci.begin(), studenci.begin());
 
     cout << endl;

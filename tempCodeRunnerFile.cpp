@@ -1,2 +1,6 @@
-cout << "Podaj znak z menu (zaznaczony w ramce)" << endl;
-// cin >> value;
+
+    int i;
+
+    for(i = 1; i < liczbaMax + 1; i++){
+    cout << "podaj imie " << i << " studenta:"<< endl;
+    cin >> studenci[i].imie;
