@@ -101,7 +101,7 @@ while(value != KEY_X){ // x - wyjscie z petli calkowicie
         cin >> wybor;
          // odczyt z pliku
         if(wybor == 0){
-            cout << "trzymaj sie, milego dnia" << endl;
+            cout << "zakonczyles program, milego dnia..." << endl;
             return 0;
         } else {
             odczytPliku(liczbaMax,liczbaMaxNowych,studenci);
@@ -183,7 +183,6 @@ if(liczbaMaxNowych > 20 ){
 }
 
 int i;
-
     for(i = 1 + liczbaMax; i < liczbaMaxNowych + 1 + liczbaMax; i++){
     cout << "podaj imie " << i - liczbaMax << " nowego studenta:"<< endl;
     cin >> studenci[i].imie;
