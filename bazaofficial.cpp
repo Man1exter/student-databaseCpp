@@ -25,7 +25,6 @@ struct Osoba{
     int wiek;
     bool operator < (const Osoba &x)const
     {
-        return imie>x.imie;
         return nazwisko>x.nazwisko;
     }
 };
